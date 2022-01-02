@@ -1,4 +1,105 @@
-<h5>THIS IS THE INDEX.html</h5>
-{% for f in foods%}
-    <h5>{{f}}</h5>
-{% endfor %}
+{% extends 'components/layout.html' %}
+
+{% block title %}Brand Name{% endblock title %}
+
+{% block content %}
+<main class="d-flex h-100 text-center text-white bg-dark">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+        <div class="container px-4 py-5 text-light" id="icon-grid">
+            <h1 class="display-4 fw-bold lh-1 mb-3 pb-2 border-bottom">Program Name</h1>
+            <p class="container justify-content-center col-lg-10 fs-4">About The Program...</p>
+            <div class="col d-flex align-items-start">
+                <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="container px-4 py-5 text-light" id="icon-grid">
+            <h2 class="pb-2 border-bottom">Icon grid</h2>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+                <div class="col d-flex align-items-start">
+                    <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                    <div>
+                        <h4 class="fw-bold mb-0">Featured title</h4>
+                        <p>Paragraph of text beneath the heading to explain the heading.</p>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                    <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                        <use xlink:href="#cpu-fill"></use>
+                    </svg>
+                    <div>
+                        <h4 class="fw-bold mb-0">Featured title</h4>
+                        <p>Paragraph of text beneath the heading to explain the heading.</p>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                    <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                        <use xlink:href="#calendar3"></use>
+                    </svg>
+                    <div>
+                        <h4 class="fw-bold mb-0">Featured title</h4>
+                        <p>Paragraph of text beneath the heading to explain the heading.</p>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                    <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                        <use xlink:href="#home"></use>
+                    </svg>
+                    <div>
+                        <h4 class="fw-bold mb-0">Featured title</h4>
+                        <p>Paragraph of text beneath the heading to explain the heading.</p>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                    <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                        <use xlink:href="#speedometer2"></use>
+                    </svg>
+                    <div>
+                        <h4 class="fw-bold mb-0">Featured title</h4>
+                        <p>Paragraph of text beneath the heading to explain the heading.</p>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                    <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                        <use xlink:href="#toggles2"></use>
+                    </svg>
+                    <div>
+                        <h4 class="fw-bold mb-0">Featured title</h4>
+                        <p>Paragraph of text beneath the heading to explain the heading.</p>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                    <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                        <use xlink:href="#geo-fill"></use>
+                    </svg>
+                    <div>
+                        <h4 class="fw-bold mb-0">Featured title</h4>
+                        <p>Paragraph of text beneath the heading to explain the heading.</p>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                    <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                        <use xlink:href="#tools"></use>
+                    </svg>
+                    <div>
+                        <h4 class="fw-bold mb-0">Featured title</h4>
+                        <p>Paragraph of text beneath the heading to explain the heading.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-auto text-white-50">
+            <p>Created by <a href="https://www.linkedin.com/in/ethannakamura/" class="text-white">@ethannakamura</a>
+            using<a href="https://getbootstrap.com/" class="text-white"> Bootstrap</a></p>
+        </footer>
+    </div>
+</main>
+{% endblock content %}

@@ -1,0 +1,38 @@
+{% extends 'components/layout.html' %}
+
+{% block title %}Sign Up{% endblock title %}
+
+{% block content %}
+<div class="container px-4 py-5 text-light" id="icon-grid">
+    <h1 class="display-4 fw-bold lh-1 mb-3 pb-2 border-bottom">Prepare to Organize</h1>
+    <p class="container justify-content-center col-lg-10 fs-4">I'm excited to have you sign up and use my planner!</p>
+    <div class="col d-flex align-items-start">
+        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+            <use xlink:href="#bootstrap"></use>
+        </svg>
+    </div>
+</div>
+
+<div class="container text-white bg-dark">
+    <div class="col-md-10 mx-auto col-lg-5">
+        <form class="p-4 p-md-5 border rounded-1 bg-dark">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3 text-white bg-dark">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+            <button class="w-100 btn btn-lg btn-light" type="submit">Sign Up</button>
+            <hr class="my-4">
+            <small class="text-muted">By clicking Sign Up, you accept spam emails.</small>
+        </form>
+    </div>
+</div>
+{% endblock content %}
