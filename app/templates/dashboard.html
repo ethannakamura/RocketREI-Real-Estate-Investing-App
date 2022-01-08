@@ -1,0 +1,22 @@
+{% extends 'components/layout.html' %}
+
+{% block title %}My Dashboard{% endblock title %}
+
+{% block content %}
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <div class="container px-4 py-5 text-light" id="icon-grid">
+        <img src="../static/images/mydashboard.png">
+    </div>
+
+    <div class="container">
+        <header ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 py-3 mb-4 border-bottom">
+                <li><a href="{{ url_for('wholesaling') }}" class="nav-link px-2 text-muted">Wholesaling</a></li>
+                <li><a href="{{ url_for('flipping') }}" class="nav-link px-2 text-muted">House Flipping</a></li>
+                <li><a href="{{ url_for('rentalboard') }}" class="nav-link px-2 text-muted">Rental Investing</a></li>
+                <li><a href="{{ url_for('rocketcrm') }}" class="nav-link px-2 text-muted">Rocket CRM</a></li>
+            </ul>
+        </header>
+    </div>
+
+    {% endblock content %}
