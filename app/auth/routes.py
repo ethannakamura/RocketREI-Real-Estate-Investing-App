@@ -13,7 +13,7 @@ def logout():
     return render_template('logout.html')
 
 @auth.route('/Signup', methods=['GET', 'POST'])
-def sign_up():
+def signup():
     form = signupForm()
 
     if request.method == 'POST':
@@ -23,6 +23,6 @@ def sign_up():
             return redirect(url_for('home'))
         else:
             print('Bad form input, try again')
-            return redirect(url_for('auth.sign_up'))
+            return redirect(url_for('auth.signup'))
 
     return render_template('signup.html', form=form)

@@ -23,6 +23,10 @@
                     {{ form.username.label }}
                     {{ form.username(class="form-control", placeholder="Check Username Availability") }}
                 </fieldset>
+                <fieldset id="email-field">
+                    {{ form.email.label }}
+                    {{ form.email(class="form-control", placeholder="Enter Your Email (rocket@gmail.com)") }}
+                </fieldset>
                 <fieldset id="fname-field">
                     {{ form.first_name.label }}
                     {{ form.first_name(class="form-control", placeholder="First Name") }}
@@ -30,10 +34,6 @@
                 <fieldset id="lname-field">
                     {{ form.last_name.label }}
                     {{ form.last_name(class="form-control", placeholder="Last Name") }}
-                </fieldset>
-                <fieldset id="email-field">
-                    {{ form.email.label }}
-                    {{ form.email(class="form-control", placeholder="Enter Your Email (rocket@gmail.com)") }}
                 </fieldset>
                 <fieldset id="password-field">
                     {{ form.password.label }}
