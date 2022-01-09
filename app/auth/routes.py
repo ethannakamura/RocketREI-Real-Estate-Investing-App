@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request, redirect, url_for
 
 from app.forms import signupForm
 
@@ -12,7 +12,13 @@ def login():
 def logout():
     return render_template('logout.html')
 
-@auth.route('/Signup')
+@auth.route('/Signup', methods=['GET', 'POST'])
 def sign_up():
     form = signupForm()
+    if request.method == 'POST':
+        if form.validate_on_submit():
+        else:
+            print('Bad form input, try again')
+            return redirect(url_for('auth.Signup'))
+
     return render_template('signup.html', form=form)
