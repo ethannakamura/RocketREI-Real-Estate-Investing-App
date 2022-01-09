@@ -15,10 +15,14 @@ def logout():
 @auth.route('/Signup', methods=['GET', 'POST'])
 def sign_up():
     form = signupForm()
+
     if request.method == 'POST':
-        if form.validate_on_submit():
+        if form.validate_on_submit(): 
+            print('successful new user data received')
+            print(form.username.data, form.email.data, form.password.data)
+            return redirect(url_for('home'))
         else:
             print('Bad form input, try again')
-            return redirect(url_for('auth.Signup'))
+            return redirect(url_for('auth.sign_up'))
 
     return render_template('signup.html', form=form)
