@@ -1,5 +1,8 @@
 from flask import Blueprint, render_template
-auth = Blueprint('auth',__name__, template_folder='auth_templates')
+
+from app.forms import signupForm
+
+auth = Blueprint('auth',__name__, template_folder='auth_templates', url_prefix='/auth')
 
 @auth.route('/Login')
 def login():
@@ -11,4 +14,5 @@ def logout():
 
 @auth.route('/Signup')
 def sign_up():
-    return render_template('signup.html')
+    form = signupForm()
+    return render_template('signup.html', form=form)

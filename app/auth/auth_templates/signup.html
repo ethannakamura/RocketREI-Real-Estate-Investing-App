@@ -9,18 +9,23 @@
     </div>
 </div>
 <div>
-    <img src="../static/images/leo.gif">
+    <img class= "border border-white" src="../static/images/leo.gif">
 </div>
 <p class="container justify-content-center col-lg-10 fs-4 text-white">
     <br>
-    We look forward to doing business with you!</p>
+</p>
 
 <div class="container text-white bg-dark">
     <div class="col-md-10 mx-auto col-lg-5">
-        <form class="p-4 p-md-5 border rounded-1 bg-dark">
+        <h4>We look forward to working together!</h4>
+        <form action= "" class="p-4 p-md-5 border rounded-1 bg-dark">
             <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
+                <fieldset id=“username-field>
+                    {{ form.username.label }}
+                    {{ form.username(class="form-control", placeholder="Check Username Availability") }}
+                </fieldset>
+                <!--<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>-->
             </div>
             <div class="form-floating mb-3 text-white bg-dark">
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
@@ -34,6 +39,7 @@
             <button class="w-100 btn btn-lg btn-light" type="submit">Sign Up</button>
             <hr class="my-4">
             <small class="text-muted">By clicking Sign Up, you agree to our terms of use.</small>
+            <small class="text-muted">Never share your username and password!</small>
         </form>
     </div>
 </div>
