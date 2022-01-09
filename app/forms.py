@@ -11,7 +11,7 @@ class signupForm(FlaskForm):
     confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo(password)])
     first_name = StringField('First Name', validators=[DataRequired()])
     last_name = StringField('Last Name', validators=[DataRequired()])
-    submit = StringField()
+    submit = SubmitField()
 
 class signinForm(FlaskForm):
     pass

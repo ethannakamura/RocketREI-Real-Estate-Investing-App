@@ -9,35 +9,50 @@
     </div>
 </div>
 <div>
-    <img class= "border border-white" src="../static/images/leo.gif">
+    <img class="border border-white" src="../static/images/leo.gif">
 </div>
 <p class="container justify-content-center col-lg-10 fs-4 text-white">
 </p>
 
-<div class="container text-white bg-dark" id="allforms">
-    <div class="col-md-10 mx-auto col-lg-5">
+<div class="row text-white bg-dark">
+    <div class="mx-auto">
         <h4>We look forward to working together!</h4>
-        <form action= "" class="p-4 p-md-5 border rounded-1 bg-dark">
-            <div class="form-floating mb-3">
-                <fieldset id=“username-field>
+        <form action="" class="p-4 p-md-5 border rounded-1 bg-dark">
+            <div class form-group>
+                <fieldset id="username-field">
                     {{ form.username.label }}
                     {{ form.username(class="form-control", placeholder="Check Username Availability") }}
                 </fieldset>
-                <!--<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>-->
-            </div>
-            <div class="form-floating mb-3">
-                <fieldset id=password-field>
+                <fieldset id="email-field">
                     {{ form.email.label }}
-                    {{ form.email(class="form-control", placeholder="Enter Your Email(abc@.com") }}
+                    {{ form.email(class="form-control", placeholder="Enter Your Email (rocket@.com)") }}
                 </fieldset>
-            </div>
-            <div class="form-floating mb-3">
-                <fieldset id=password-field>
+                <fieldset id="password-field">
                     {{ form.password.label }}
                     {{ form.password(class="form-control", placeholder="Enter Your Desired Password") }}
-                <!--<input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">Password</label>-->
+                </fieldset>
+                <fieldset id="confirm-field">
+                    {{ form.password.label }}
+                    {{ form.confirm_password(class="form-control", placeholder="Confirm Your Password") }}
+                </fieldset>
+                <br>
+                {{ form.submit(class="btn btn-block btn-info btn-danger") }}
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--<div class="row text-white bg-dark">
+    <form action="" class="p-4 p-md-5 border rounded-1 bg-dark">
+        <div class="col-md-10 mx-auto col-lg-5">
+            <h4>We look forward to working together!</h4>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
                 </fieldset>
             </div>
             <div class="checkbox mb-3">
@@ -45,14 +60,12 @@
                     <input type="checkbox" value="remember-me"> Remember me
                 </label>
             </div>
-            <fieldset>
-                {{ form.submit(class="btn btn-block w-100 btn-danger btn-info") }}
-            </fieldset>
-            <!--<button class="w-100 btn btn-lg btn-light" type="submit">Sign Up</button>-->
+            <button class="w-100 btn btn-lg btn-light" type="submit">Sign Up</button>
             <hr class="my-4">
             <small class="text-muted">By clicking Sign Up, you agree to our terms of use.</small>
             <small class="text-muted">Never share your username and password!</small>
-        </form>
-    </div>
-</div>
+        </div>
+    </form>
+</div>-->
+
 {% endblock content %}
