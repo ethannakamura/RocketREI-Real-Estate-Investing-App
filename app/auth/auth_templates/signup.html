@@ -25,7 +25,7 @@
                 </fieldset>
                 <fieldset id="email-field">
                     {{ form.email.label }}
-                    {{ form.email(class="form-control", placeholder="Enter Your Email (rocket@.com)") }}
+                    {{ form.email(class="form-control", placeholder="Enter Your Email (rocket@gmail.com)") }}
                 </fieldset>
                 <fieldset id="password-field">
                     {{ form.password.label }}
@@ -37,6 +37,10 @@
                 </fieldset>
                 <br>
                 {{ form.submit(class="btn btn-block btn-info btn-danger") }}
+                <hr class="my-4">
+                <small class="text-muted">By clicking Sign Up, you agree to our terms of use.</small>
+                <br>
+                <small class="text-muted">Never share your username and password!</small>
             </div>
         </form>
     </div>
