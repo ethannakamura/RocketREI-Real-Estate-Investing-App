@@ -18,6 +18,7 @@
     <div class="mx-auto">
         <h4>We look forward to working together!</h4>
         <form method="POST">
+            {{ form.hidden_tag() }}
             <div class form-group>
                 <fieldset id="username-field">
                     {{ form.username.label }}

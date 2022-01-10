@@ -12,15 +12,16 @@ def login():
 def logout():
     return render_template('logout.html')
 
-@auth.route('/Signup', methods=['GET', 'POST'])
+@auth.route('/register', methods=['GET', 'POST'])
 def signup():
     form = signupForm()
 
-    if request.method == 'POST':
+    if request.method =='POST':
+        print(form.username.data, form.email.data, form.password.data)
         if form.validate_on_submit(): 
             print('successful new user data received')
             print(form.username.data, form.email.data, form.password.data)
-            return redirect(url_for('home'))
+            return redirect(url_for('dashboard'))
         else:
             print('Bad form input, try again')
             return redirect(url_for('auth.signup'))
