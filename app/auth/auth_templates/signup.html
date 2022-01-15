@@ -19,37 +19,38 @@
         <h4>We look forward to working together!</h4>
         <form method="POST">
             {{ form.hidden_tag() }}
-            <div class form-group>
-                <fieldset id="username-field">
-                    {{ form.username.label }}
-                    {{ form.username(class="form-control", placeholder="Check Username Availability") }}
-                </fieldset>
-                <fieldset id="email-field">
-                    {{ form.email.label }}
-                    {{ form.email(class="form-control", placeholder="Enter Your Email (rocket@gmail.com)") }}
-                </fieldset>
-                <fieldset id="fname-field">
-                    {{ form.first_name.label }}
-                    {{ form.first_name(class="form-control", placeholder="First Name") }}
-                </fieldset>
-                <fieldset id="lname-field">
-                    {{ form.last_name.label }}
-                    {{ form.last_name(class="form-control", placeholder="Last Name") }}
-                </fieldset>
-                <fieldset id="password-field">
-                    {{ form.password.label }}
-                    {{ form.password(class="form-control", placeholder="Enter Your Password") }}
-                </fieldset>
-                <fieldset id="confirm-field">
-                    {{ form.confirm_password.label }}
-                    {{ form.confirm_password(class="form-control", placeholder="Confirm Your Password") }}
-                </fieldset>
-                <br>
-                {{ form.submit(class="btn btn-block btn-info btn-danger") }}
-                <hr class="my-4">
-                <small class="text-muted">By clicking Sign Up, you agree to our terms of use.</small>
-                <br>
-                <small class="text-muted">Never share your username and password!</small>
+            <div class="containter id=placeinfo">
+                <div class="form-group">
+                    <fieldset id="username-field">
+                        {{ form.username(class="form-control", placeholder="Enter Your Username") }}
+                    </fieldset>
+                    <br>
+                    <fieldset id="email-field">
+                        {{ form.email(class="form-control", placeholder="Enter Your Email (rocket@gmail.com)") }}
+                    </fieldset>
+                    <br>
+                    <fieldset id="fname-field">
+                        {{ form.first_name(class="form-control", placeholder="Enter Your First Name") }}
+                    </fieldset>
+                    <br>
+                    <fieldset id="lname-field">
+                        {{ form.last_name(class="form-control", placeholder="Enter Your Last Name") }}
+                    </fieldset>
+                    <br>
+                    <fieldset id="password-field">
+                        {{ form.password(class="form-control", placeholder="Enter Your Password") }}
+                    </fieldset>
+                    <br>
+                    <fieldset id="confirm-field">
+                        {{ form.confirm_password(class="form-control", placeholder="Confirm Your Password") }}
+                    </fieldset>
+                    <br>
+                    {{ form.submit(class="btn btn-block btn-info btn-danger") }}
+                    <hr class="my-4">
+                    <small class="text-muted">By clicking Sign Up, you agree to our terms of use.</small>
+                    <br>
+                    <small class="text-muted">Never share your username and password!</small>
+                </div>
             </div>
         </form>
     </div>

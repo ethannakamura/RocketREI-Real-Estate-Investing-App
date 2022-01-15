@@ -1,12 +1,24 @@
+from re import L
 from flask import Blueprint, render_template, request, redirect, url_for
 
-from app.forms import signupForm
+from app.forms import signupForm, signinForm
 
 auth = Blueprint('auth',__name__, template_folder='auth_templates', url_prefix='/auth')
 
-@auth.route('/Login')
+@auth.route('/Login', methods=['GET', 'POST'])
 def login():
-    return render_template('login.html')
+    form = signinForm()
+
+    if request.method == 'POST':
+        if form.validate_on_submit():
+            print('This user is ready to be checked for correct username and password')
+            print(form.username.data, form.password.data)
+            return redirect(url_for('dashboard'))
+        else:
+            print('Bad form input, try again')
+            return redirect(url_for('auth.login'))
+
+    return render_template('login.html', form=form)
 
 @auth.route('/LogoutSuccessful')
 def logout():
