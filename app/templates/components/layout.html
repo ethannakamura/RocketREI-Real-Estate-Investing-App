@@ -13,9 +13,13 @@
     <link rel="stylesheet" href="../../static/css/style.css">
 </head>
 
-<body class="container.text-dark text-center bg-dark">
+<body class="text-center">
     <br>
-    <nav class="navbar navbar-dark bg-dark justify-content-center">
+    <div>
+        <img src="../../static/images/motto.png">
+    </div>
+    <br>
+    <nav class="navbar navbar-dark justify-content-center text-white">
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01"
             aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -36,7 +40,7 @@
                 <div class="container justify-content-center">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Membership</a>
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Investonauts</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
                             <a class="dropdown-item text-center" href="{{ url_for('auth.signup') }}">Sign Up</a>
                             <a class="dropdown-item text-center" href="{{ url_for('auth.login') }}">Login</a>

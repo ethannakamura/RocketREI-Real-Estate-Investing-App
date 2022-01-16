@@ -4,6 +4,9 @@ from config import Config
 from .api.routes import api
 from .auth.routes import auth
 
+from .models import db
+from flask_migrate import Migrate
+
 app = Flask(__name__)
 
 app.config.from_object(Config)
@@ -13,4 +16,9 @@ app.config.from_object(Config)
 app.register_blueprint(api)
 app.register_blueprint(auth)
 
+db.init_app(app)
+migrate = Migrate(app, db)
+
 from . import routes
+
+#__init__.py is about creating communication between our apps and services

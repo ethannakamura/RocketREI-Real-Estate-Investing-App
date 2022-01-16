@@ -4,15 +4,15 @@
 
 {% block content %}
 
-<div class="container px-4 py-5 text-light" id="icon-grid">
-    <div class="display-4 fw-bold lh-1 mb-3 pb-2 border-bottom">
+<div class="container px-4 py-4 text-light">
+    <div>
         <img src="../../static/images/rocketlogin.png">
     </div>
     <br>
     <img class="border border-white" src="../../static/images/login.gif">
-    <div class="container text-white bg-dark">
+    <div class="container text-white">
         <div class="col-md-10 mx-auto col-lg-5">
-            <form method="POST" class="p-4 p-md-5 rounded-1 bg-dark">
+            <form method="POST" class="p-4 p-md-5 rounded-1">
                 {{ form.hidden_tag() }}
                 <div class="containter id=placeinfo">
                     <div class="form-group">
@@ -24,9 +24,9 @@
                             {{ form.password(class="form-control", placeholder="Enter Your Password") }}
                         </fieldset>
                         <br>
-                        {{ form.submit(class="btn btn-block btn-info btn-danger") }}
-                        <hr class="my-4">
-                        <small class="text-muted">Welcome Back!</small>
+                        {{ form.submit(class="btn btn-block btn-outline-light") }}
+                        <br>
+                            <img src="../../static/images/welcomeback.png" id="logo">
                     </div>
                 </div>
             </form>
