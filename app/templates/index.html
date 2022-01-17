@@ -1,80 +1,100 @@
 {% extends 'components/layout.html' %}
 
-{% block title %}Brand Name{% endblock title %}
+{% block title %}©ROCKETREI{% endblock title %}
 
 {% block content %}
 
 <main class="container-fluid mx-auto text-white">
-    <div">
-        <div>
-            <br>
-            <br>
-            <img src="../static/images/Bizlogo.png" id="logo">
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-lg-12" id="header">
+            <img src="../static/images/header.png">
         </div>
     </div>
+    <div class="row">
+        <div class="col-lg-12" id="handshake">
+            <img src="../static/images/handshake.png">
+        </div>
+    </div>
+
     <br>
     <br>
-    <div class="py-5">
-        <img src="../static/images/reg1.png" id="logo">
-    </div>
-    <div>
-        <img src="../static/images/regbox.png" id="logo">
-    </div>
-    <div>
-        <img src="../static/images/reg2.png" id="logo">
-    </div>
-    <br>
-    <div class="yes btn btn-light btn-lgme-sm-3 fw-bold">
-        <a href="{{ url_for('auth.signup') }}" button type="button">
+    <div class="yes btn btn-danger btn-lg-3 fw-bold">
+        <a class="text-white" href="{{ url_for('auth.signup') }}" button type="button">
             <strong>I WANT TO</strong><br><strong>SHOOT FOR THE STARS!</strong></a>
     </div>
 
-    <div class="details1 row mt-5">
+    <div class="row">
         <div class="col-lg-6">
-            <img src="../static/images/details.png">
+            <img src="../static/images/bizgoals.png">
         </div>
-        <div class="words1 col-lg-6">
-            <img src="../static/images/detailswords.png">
+        <div class="col-lg-6">
+            <img src="../static/images/access.png">
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-lg-12">
+            <img class="my-5" src="../static/images/verification.png">
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-lg-12">
+            <img class="my-5" src="../static/images/policy.png">
         </div>
     </div>
 
-    <div class="row mt-5">
-        <div class="words2 col-lg-6">
-            <img src="../static/images/details2words.png">
+    <div class="row">
+        <div class="col-lg-12">
+            <img src="../static/images/approved.png">
         </div>
-        <div class="details2 col-lg-6">
-            <img src="../static/images/details2.png">
+
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <img src="../static/images/man.png">
+        </div>
+        <div class="col-lg-6">
+            <img src="../static/images/woman.png">
         </div>
     </div>
+
+
+
 
     <div class="container justify-content-center">
         <div class=" px-4 py-5" id="icon-grid">
             <img src="../static/images/rocketdash.png">
+            <img src="../static/images/nation.png">
         </div>
-
-
     </div>
 
-    <div class="container">
-        <footer class="py-3 my-4">
-            <ul class="nav justify-content-center">
-                <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link px-2 text-white">Home</a></li>
-                <li class="nav-item"><a href="{{ url_for('dashboard') }}" class="nav-link px-2 text-white">Rocket
-                        Dashboard</a>
-                </li>
-                <li class="nav-item"><a href="{{ url_for('api.apidata') }}" class="nav-link px-2 text-white">Api</a>
-                </li>
-                <li class="nav-item"><a href="{{ url_for('auth.signup') }}" class="nav-link px-2 text-white">Sign Up</a>
-                </li>
-                <li class="nav-item"><a href="{{ url_for('auth.login') }}" class="nav-link px-2 text-white">Login</a>
-                </li>
-                <li class="nav-item"><a href="{{ url_for('auth.logout') }}" class="nav-link px-2 text-white">Logout</a>
-                </li>
-            </ul>
-            <p class="container justify-content-center col-lg-10 fs-4 px-2 text-white">Created by <a
-                    href="https://www.linkedin.com/in/ethannakamura/" class="text-white">@ethannakamura</a>
-        </footer>
-    </div>
+        <div class="container">
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link px-2 text-white">Home</a>
+                    </li>
+                    <li class="nav-item"><a href="{{ url_for('dashboard') }}" class="nav-link px-2 text-white">Rocket
+                            Dashboard</a>
+                    </li>
+                    <li class="nav-item"><a href="{{ url_for('api.apidata') }}" class="nav-link px-2 text-white">Api</a>
+                    </li>
+                    <li class="nav-item"><a href="{{ url_for('auth.signup') }}" class="nav-link px-2 text-white">Sign
+                            Up</a>
+                    </li>
+                    <li class="nav-item"><a href="{{ url_for('auth.login') }}"
+                            class="nav-link px-2 text-white">Login</a>
+                    </li>
+                    <li class="nav-item"><a href="{{ url_for('auth.logout') }}"
+                            class="nav-link px-2 text-white">Logout</a>
+                    </li>
+                </ul>
+                <p class="container justify-content-center col-lg-10 fs-4 px-2 text-white">Created by <a
+                        href="https://www.linkedin.com/in/ethannakamura/" class="text-white">@ethannakamura</a>
+            </footer>
+        </div>
 
 </main>
 
