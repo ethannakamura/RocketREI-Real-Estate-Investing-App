@@ -41,60 +41,66 @@
     </div>
     <div class="row text-center">
         <div class="col-lg-12">
-            <img class="my-5" src="../static/images/policy.png">
+            <img class="my-3" src="../static/images/policy.png">
         </div>
     </div>
 
     <div class="row">
         <div class="col-lg-12">
-            <img src="../static/images/approved.png">
+            <img class="my-5" src="../static/images/approved.png">
         </div>
-
     </div>
 
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
+            <img class="my-3" src="../static/images/access2.png">
+        </div>
+    </div>
+
+    <div class="container justify-content-center">
+        <div class="py-5">
+            <img src="../static/images/rocketdash.png">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <img src="../static/images/ending.png">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 py-5">
             <img src="../static/images/man.png">
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 py-5">
             <img src="../static/images/woman.png">
         </div>
     </div>
 
 
-
-
-    <div class="container justify-content-center">
-        <div class=" px-4 py-5" id="icon-grid">
-            <img src="../static/images/rocketdash.png">
-            <img src="../static/images/nation.png">
-        </div>
+    <div class="container">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link px-2 text-white">Home</a>
+                </li>
+                <li class="nav-item"><a href="{{ url_for('dashboard') }}" class="nav-link px-2 text-white">Rocket
+                        Dashboard</a>
+                </li>
+                <li class="nav-item"><a href="{{ url_for('api.apidata') }}" class="nav-link px-2 text-white">Api</a>
+                </li>
+                <li class="nav-item"><a href="{{ url_for('auth.signup') }}" class="nav-link px-2 text-white">Sign
+                        Up</a>
+                </li>
+                <li class="nav-item"><a href="{{ url_for('auth.login') }}" class="nav-link px-2 text-white">Login</a>
+                </li>
+                <li class="nav-item"><a href="{{ url_for('auth.logout') }}" class="nav-link px-2 text-white">Logout</a>
+                </li>
+            </ul>
+            <p class="container justify-content-center col-lg-10 fs-4 px-2 text-white">Created by <a
+                    href="https://www.linkedin.com/in/ethannakamura/" class="text-white">@ethannakamura</a>
+        </footer>
     </div>
-
-        <div class="container">
-            <footer class="py-3 my-4">
-                <ul class="nav justify-content-center">
-                    <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link px-2 text-white">Home</a>
-                    </li>
-                    <li class="nav-item"><a href="{{ url_for('dashboard') }}" class="nav-link px-2 text-white">Rocket
-                            Dashboard</a>
-                    </li>
-                    <li class="nav-item"><a href="{{ url_for('api.apidata') }}" class="nav-link px-2 text-white">Api</a>
-                    </li>
-                    <li class="nav-item"><a href="{{ url_for('auth.signup') }}" class="nav-link px-2 text-white">Sign
-                            Up</a>
-                    </li>
-                    <li class="nav-item"><a href="{{ url_for('auth.login') }}"
-                            class="nav-link px-2 text-white">Login</a>
-                    </li>
-                    <li class="nav-item"><a href="{{ url_for('auth.logout') }}"
-                            class="nav-link px-2 text-white">Logout</a>
-                    </li>
-                </ul>
-                <p class="container justify-content-center col-lg-10 fs-4 px-2 text-white">Created by <a
-                        href="https://www.linkedin.com/in/ethannakamura/" class="text-white">@ethannakamura</a>
-            </footer>
-        </div>
 
 </main>
 
