@@ -3,6 +3,7 @@ from config import Config
 
 from .api.routes import api
 from .auth.routes import auth
+from .calculators.routes import calculators
 
 from .models import db
 from flask_migrate import Migrate
@@ -15,6 +16,7 @@ app.config.from_object(Config)
 # so we dont need to define in route
 app.register_blueprint(api)
 app.register_blueprint(auth)
+app.register_blueprint(calculators)
 
 db.init_app(app)
 migrate = Migrate(app, db)
