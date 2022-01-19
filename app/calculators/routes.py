@@ -16,13 +16,29 @@ def rincome():
     mowatersewer = form.watersewer.data
     mogarbage = form.garbage.data
     moelectricity = form.electricity.data
+    mogas = form.gas.data
+    mohoafees = form.hoafees.data
+    molawn = form.lawn.data
+    movacancy = form.vacancy.data
+    morepairs = form.repairs.data
+    mocapex = form.capex.data
+    mopropmgmt = form.propmgmt.data
+    momortgage = form.mortgage.data
+    mototalincome = form.totalincome.data
+    mototalexpenses = form.totalexpenses.data
+
     calc1 = []
     if request.method == 'POST':
         if form.validate_on_submit():
             res1 = float(morentalincome) + float(momiscsvcincome)
-            res2 = float(moproptax) + float(moinsurance) + float(mowatersewer) + float(mogarbage) + float(moelectricity)
-            calc1.append(res1)
-            calc1.append(res2)
+            resonepointfive = int(res1)
+            res2 = float(moproptax) + float(moinsurance) + float(mowatersewer) + float(mogarbage) + float(moelectricity) + float(mogas) + float(mohoafees) + float(molawn) + float(movacancy) + float(morepairs) + float(mocapex) + float(mopropmgmt) + float(momortgage)
+            restwopointfive = int(res2)
+            res3 = float(mototalincome) + float(mototalexpenses)
+            resthreepointfive = int(res3)
+            calc1.append(resonepointfive)
+            calc1.append(restwopointfive)
+            calc1.append(resthreepointfive)
             print('info received') 
         else:
             print('info not received')

@@ -4,114 +4,162 @@
 
 {% block content %}
 
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <div class="container px-4 py-5 text-light" id="icon-grid">
-        <img src="../static/images/rentalboard.png">
+<div class="container px-4 py-5 text-light" id="icon-grid">
+    <img src="../static/images/rentalboard.png">
+</div>
+
+<div class="container">
+    <header ul class="nav col-12 col-md-auto mb-2 justify-content-center">
+        <li><a href="{{ url_for('dashboard') }}" class="nav-link px-2 text-warning">Return to My Dashboard</a></li>
+    </header>
+</div>
+<br>
+
+<div class="container px-4 py-5 text-light" id="icon-grid">
+    <img src="../static/images/rentalcalc.png">
+</div>
+
+<div class="btn-toolbar justify-content-center">
+    <div class="btn-group me-2">
+        <button type="button" class="btn btn-med btn-outline-danger">Export</button>
     </div>
+</div>
+<br>
 
-    <div class="container">
-        <header ul class="nav col-12 col-md-auto mb-2 justify-content-center">
-            <li><a href="{{ url_for('dashboard') }}" class="nav-link px-2 text-warning">Return to My Dashboard</a></li>
+<form method="POST" id="placeinfo">
+    <!--Coding Options #2 and #3 use Form for jinja statements-->
+    <!--Coding Option #1 use Form and Form2 for two separate divs with different 
+        fieldsets and jinja form statements-->
+    {{ form.hidden_tag() }}
+    <div class="container" id="placeinfo">
+        <div class="row">
+            <div class="col-md-6">
+                <fieldset id="rentalincome-field">
+                    {{ form.rentalincome(class="form-control text-center", placeholder="Enter Mo. Rental Income") }}
+                </fieldset>
+                <br>
 
-            </ul>
-        </header>
-    </div>
+                <fieldset id="miscsvcincome-field">
+                    {{ form.miscsvcincome(class="form-control text-center", placeholder="Enter Mo. Miscellaneous Income (If you profit from other services) ") }}
+                </fieldset>
+                <br>
 
-    <br>
-    <div class="btn-toolbar justify-content-center">
-        <div class="btn-group me-2">
-            <button type="button" class="btn btn-med btn-outline-danger">Export</button>
+                {%if form%}
+                <p class="font-weight-bold font-size:25px" id="results">Monthy Rental Income: ${{calc1[0]}}</p>
+                {%endif%}
+                <br>
+                <!---->
+                <fieldset id="proptax-field">
+                    {{ form.proptax(class="form-control text-center", placeholder="Enter Mo. Property Tax") }}
+                </fieldset>
+                <br>
+
+                <fieldset id="insurance-field">
+                    {{ form.insurance(class="form-control text-center", placeholder="Enter Mo. Insurance Cost") }}
+                </fieldset>
+                <br>
+
+                <fieldset id="watersewer-field">
+                    {{ form.watersewer(class="form-control text-center", placeholder="Enter Mo. Water/Sewer Cost") }}
+                </fieldset>
+                <br>
+
+                <fieldset id="garbage-field">
+                    {{ form.garbage(class="form-control text-center", placeholder="Enter Mo. Garbage Cost") }}
+                </fieldset>
+                <br>
+
+                <fieldset id="electricity-field">
+                    {{ form.electricity(class="form-control text-center", placeholder="Enter Mo. Electricity Cost") }}
+                </fieldset>
+                <br>
+            </div>
+            <div class="col-md-6">
+                <fieldset id="gas-field">
+                    {{ form.gas(class="form-control text-center", placeholder="Enter Mo. Gas Cost") }}
+                </fieldset>
+                <br>
+
+                <fieldset id="hoafees-field">
+                    {{ form.hoafees(class="form-control text-center", placeholder="Enter Mo. HOA Fees") }}
+                </fieldset>
+                <br>
+
+                <fieldset id="lawn-field">
+                    {{ form.lawn(class="form-control text-center", placeholder="Enter Mo. Lawn Maintenance Cost") }}
+                </fieldset>
+                <br>
+
+                <fieldset id="vacancy-field">
+                    {{ form.vacancy(class="form-control text-center", placeholder="Enter Mo. Vacancy Savings") }}
+                </fieldset>
+                <br>
+
+                <fieldset id="repairs-field">
+                    {{ form.repairs(class="form-control text-center", placeholder="Enter Mo. Repair Savings") }}
+                </fieldset>
+                <br>
+
+                <fieldset id="capex-field">
+                    {{ form.capex(class="form-control text-center", placeholder="Enter Mo. Capex Savings") }}
+                </fieldset>
+                <br>
+
+                <fieldset id="propmgmt-field">
+                    {{ form.propmgmt(class="form-control text-center", placeholder="Enter Mo. Property Management Cost") }}
+                </fieldset>
+                <br>
+
+                <fieldset id="mortgage-field">
+                    {{ form.mortgage(class="form-control text-center", placeholder="Enter Mo. Property Mortgage Cost") }}
+                </fieldset>
+                <br>
+
+                {%if form%}
+                <h6 class="font-weight-bold font-size:25px" id="results">Monthy Expenses: ${{calc1[1]}}
+                </h6>
+                {%endif%}
+                <br>
+
+            </div>
+        </div>
+        <!---->
+        <div class="row">
+            <div class="col-lg-6">
+                <fieldset id="totalincome-field">
+                    {{ form.totalincome(class="form-control text-center", placeholder="Enter Mo. Capex Savings") }}
+                </fieldset>
+                <br>
+
+                <fieldset id="totalexpenses-field">
+                    {{ form.totalexpenses(class="form-control text-center", placeholder="Enter Monthly Property Management Cost") }}
+                </fieldset>
+                <br>
+
+                {%if form%}
+                <h6 class="font-weight-bold font-size:25px" id="results">Total Monthly Cashflow: ${{calc1[2]}}
+                </h6>
+                {%endif%}
+                <br>
+
+            </div>
+        </div>
+        <div class="col-lg-6">
+
+
+
+
+
+            {{ form.submit(class="btn btn-block btn-outline-light") }}
         </div>
     </div>
-    <div class="container text-white">
-        <div class="mx-auto">
-            <form method="POST" class="p-4 p-md-5 rounded-1">
+</form>
 
-                <!--Coding Options #2 and #3 use Form for jinja statements-->
-                <!--Coding Option #1 use Form and Form2 for two separate divs with different 
-                    fieldsets and jinja form statements-->
-                {{ form.hidden_tag() }}
-                <div class="container id=placeinfo">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="form-group">
-                                <fieldset id="rentalincome-field">
-                                    {{ form.rentalincome(class="form-control text-center", placeholder="Enter Monthly Rental Income") }}
-                                </fieldset>
-                                <br>
-                                <fieldset id="miscsvcincome-field">
-                                    {{ form.miscsvcincome(class="form-control text-center", placeholder="Enter Monthly Miscellaneous Income") }}
-                                </fieldset>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    {%if form%}
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="font-weight-bold font-size:25px" id="results">Your Monthy Rental Income is: ${{calc1[0]}}</p>
-                            </div>
-                        </div>
-                    </div>
-                    {%endif%}
-                    <div class="row">
-                        <div class="col-6">
-                            <br>
-                            <fieldset id="proptax-field">
-                                {{ form.proptax(class="form-control text-center", placeholder="Enter Monthly Property Tax Cost")
-                                }}
-                            </fieldset>
-                            <br>
-                            <fieldset id="insurance-field">
-                                {{ form.insurance(class="form-control text-center", placeholder="Enter Monthly Insurance Cost")
-                                }} 
-                            </fieldset>
-                        
-                            <br>
-                            <fieldset id="insurance-field">
-                                {{ form.watersewer(class="form-control text-center", placeholder="Enter Monthly Water/Sewer Cost")
-                                }} 
-                            </fieldset>
-                       
-                            <br>
-                            <fieldset id="insurance-field">
-                                {{ form.garbage(class="form-control text-center", placeholder="Enter Monthly Garbage Cost")
-                                }} 
-                            </fieldset>
-                        
-                            <br>
-                            <fieldset id="insurance-field">
-                                {{ form.electricity(class="form-control text-center", placeholder="Enter Monthly Electricity Cost")
-                                }} 
-                            </fieldset>
-                        </div>
-                    </div>
-                    <br>
-                    {%if form%}
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-6">
-                                <h6 class="font-weight-bold font-size:25px" id="results">Your Monthy Expenses are: ${{calc1[1]}}</h6>
-                            </div>
-                        </div>
-                    </div>
-                    {%endif%}
-                    <br>
-                    
-                    <div class = "container">
-                        <div class = "row">
-                            <div class="col-6" id="submitbuttons">
-                                {{ form.submit(class="btn btn-block btn-outline-light") }}
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <!--Coding Option #4 THIS WORKED
+<!--Coding Option #4 THIS WORKED
                         Create one list for each calculation, call them by index-->
 
-                    <!--Results option-->
-                    <!--Coding Option #3 THIS WORKED
+<!--Results option-->
+<!--Coding Option #3 THIS WORKED
 
                         Create two separate lists one for each calculation
                         <p>Your Total Monthy Rental Income is: {{calc1}}</p>
@@ -124,8 +172,6 @@
                         Coding Option #1
                         <p>Your Total Monthy Rental Income is: {{tmi2}}</p>
                         <p>Your Total Monthy Expenses is: {{tim3}}</p>-->
-                </div>
-            </form>
-        </div>
-    </div>
+</div>
+</form>
 {% endblock content %}
