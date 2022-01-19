@@ -150,7 +150,7 @@
                     {{ form.downpayment(class="form-control text-center", placeholder="Enter Your Property Down Payment (Cell 19)") }}
                 </fieldset>
                 <br>
-                {{ form.submit(class="btn btn-block btn-light") }}
+                {{ form.submit(class="btn btn-block btn-outline-warning") }}
             </div>
             <div class="col-lg-6">
                 <fieldset id="onlyclosingcosts-field">
@@ -185,7 +185,7 @@
                 <br>
 
                 {%if form%}
-                <h6 class="font-weight-bold font-size:25px" id="results">Cash on Cash Return: %{{calc1[5]}}
+                <h6 class="font-weight-bold font-size:25px" id="results">Cash on Cash Return: {{calc1[5]}}%
                 </h6>
                 {%endif%}
                 <br>
