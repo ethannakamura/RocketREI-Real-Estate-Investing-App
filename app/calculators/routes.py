@@ -13,14 +13,17 @@ def rincome():
     momiscsvcincome = form.miscsvcincome.data
     moproptax = form.proptax.data
     moinsurance = form.insurance.data
+    mowatersewer = form.watersewer.data
+    mogarbage = form.garbage.data
+    moelectricity = form.electricity.data
     calc1 = []
     if request.method == 'POST':
         if form.validate_on_submit():
             res1 = float(morentalincome) + float(momiscsvcincome)
-            res2 = float(moproptax) + float(moinsurance)
+            res2 = float(moproptax) + float(moinsurance) + float(mowatersewer) + float(mogarbage) + float(moelectricity)
             calc1.append(res1)
             calc1.append(res2)
-            print('info received')  
+            print('info received') 
         else:
             print('info not received')
 

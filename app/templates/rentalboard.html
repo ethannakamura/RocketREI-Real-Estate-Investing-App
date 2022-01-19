@@ -50,7 +50,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-6">
-                                <p class="font-weight-bolder font-size:25px" id="results">Your Total Monthy Rental Income is: ${{calc1[0]}}</p>
+                                <p class="font-weight-bold font-size:25px" id="results">Your Monthy Rental Income is: ${{calc1[0]}}</p>
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,25 @@
                             <br>
                             <fieldset id="insurance-field">
                                 {{ form.insurance(class="form-control text-center", placeholder="Enter Monthly Insurance Cost")
-                                }}
+                                }} 
+                            </fieldset>
+                        
+                            <br>
+                            <fieldset id="insurance-field">
+                                {{ form.watersewer(class="form-control text-center", placeholder="Enter Monthly Water/Sewer Cost")
+                                }} 
+                            </fieldset>
+                       
+                            <br>
+                            <fieldset id="insurance-field">
+                                {{ form.garbage(class="form-control text-center", placeholder="Enter Monthly Garbage Cost")
+                                }} 
+                            </fieldset>
+                        
+                            <br>
+                            <fieldset id="insurance-field">
+                                {{ form.electricity(class="form-control text-center", placeholder="Enter Monthly Electricity Cost")
+                                }} 
                             </fieldset>
                         </div>
                     </div>
@@ -74,12 +92,13 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-6">
-                                <h6 class="font-weight-bolder font-size:25px" id="results">Your Total Monthy Expenses are: ${{calc1[1]}}</h6>
+                                <h6 class="font-weight-bold font-size:25px" id="results">Your Monthy Expenses are: ${{calc1[1]}}</h6>
                             </div>
                         </div>
                     </div>
                     {%endif%}
                     <br>
+                    
                     <div class = "container">
                         <div class = "row">
                             <div class="col-6" id="submitbuttons">

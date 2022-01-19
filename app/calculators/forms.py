@@ -13,9 +13,10 @@ class rentalinvestingForm(FlaskForm):
     # - addition - calculate total monthly expenses 
     proptax = StringField('proptax', validators=[DataRequired()])
     insurance = StringField('insurance', validators=[DataRequired()])
-    #watersewer = StringField('watersewer', validators=[DataRequired()])
-    #garbage = StringField('garbage', validators=[DataRequired()])
-    #electric = StringField('electric', validators=[DataRequired()])
+    watersewer = StringField('watersewer', validators=[DataRequired()])
+    garbage = StringField('garbage', validators=[DataRequired()])
+    electricity = StringField('electric', validators=[DataRequired()])
+    
     #gas = StringField('gas', validators=[DataRequired()])
     #hoafees = StringField('hoafees', validators=[DataRequired()])
     #lawn = StringField('lawn', validators=[DataRequired()])
