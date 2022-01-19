@@ -3,12 +3,12 @@ body{
 }
 
 .yes.btn{
-    font-size:20px;
+    font-size:25px;
     background-color: purple;
     border-width: 5px;
 }
 .end.btn{
-    font-size:20px;
+    font-size:25px;
     background-color: rgb(223, 104, 0);
     border-width: 5px;
     color:purple;
