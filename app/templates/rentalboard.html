@@ -150,7 +150,6 @@
                     {{ form.downpayment(class="form-control text-center", placeholder="Enter Your Property Down Payment (Cell 19)") }}
                 </fieldset>
                 <br>
-                {{ form.submit(class="btn btn-block btn-outline-warning") }}
             </div>
             <div class="col-lg-6">
                 <fieldset id="onlyclosingcosts-field">
@@ -169,7 +168,7 @@
                 <br>
 
                 {%if form%}
-                <h6 class="font-weight-bold font-size:25px" id="results">Required Investment (To Purchase Property): ${{calc1[4]}}
+                <h6 class="font-weight-bold font-size:25px" id="results">Required Investment (To Invest In Property): ${{calc1[4]}}
                 </h6>
                 {%endif%}
                 <br>
@@ -188,6 +187,12 @@
                 <h6 class="font-weight-bold font-size:25px" id="results">Cash on Cash Return: {{calc1[5]}}%
                 </h6>
                 {%endif%}
+        </div>
+        <div class="container">
+            <div class="div col-lg-12"></div>
+            {{ form.submit(class="btn submit btn-lg btn-block btn-outline-light text-center") }}
+            </div>
+        </div>
                 <br>
             </div>
         </div>
