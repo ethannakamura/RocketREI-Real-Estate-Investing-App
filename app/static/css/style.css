@@ -22,44 +22,44 @@ body{
     margin-top: 250px;
 }
 #ftext{
-    font-size:23px;
+    font-size:20px;
     background-color: rgba(48, 0, 103, 0.276);
 }
 #ptext{
     font-size:20px;
 }
 #navhome{
-    font-size: 23px;
+    font-size: 20px;
     color:rgb(250, 221, 104);
 }
 #navdash{
-    font-size: 23px;
+    font-size: 20px;
     color:rgb(255, 150, 37);
 }
 #navapi{
-    font-size: 23px;
+    font-size: 20px;
     color:rgb(255, 66, 66);
 }
 #navinvest{
-    font-size: 23px;
+    font-size: 20px;
     color:rgb(255, 255, 255);
 }
 #navbutton{
     background-color: rgba(255, 137, 64, 0);
     color: white;
-    font-size: 23px;
+    font-size: 20px;
 }
 #droptext1{
     background-color: rgb(9, 0, 104);
-    font-size: 23px;
+    font-size: 20px;
 }
 #droptext2{
     background-color: rgb(86, 0, 123);
-    font-size: 23px;
+    font-size: 20px;
 }
 #droptext3{
     background-color: rgb(149, 0, 157);
-    font-size: 23px;
+    font-size: 20px;
 }
 
 .navbar-toggler.collapsed{
