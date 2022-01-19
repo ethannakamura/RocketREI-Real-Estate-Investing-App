@@ -26,6 +26,13 @@ def rincome():
     momortgage = form.mortgage.data
     mototalincome = form.totalincome.data
     mototalexpenses = form.totalexpenses.data
+    annualcashflow = form.totalmonthlycashflow.data
+    onlydownpayment = form.downpayment.data
+    onlyclosingcosts = form.closingcosts.data
+    onlyrehabbudget = form.rehabbudget.data
+    onlycontingencyfund = form.contingencyfund.data
+    myannualcashflow = form.annualcashflow.data
+    mytotalinvestment = form.totalinvestment.data
 
     calc1 = []
     if request.method == 'POST':
@@ -34,11 +41,20 @@ def rincome():
             resonepointfive = int(res1)
             res2 = float(moproptax) + float(moinsurance) + float(mowatersewer) + float(mogarbage) + float(moelectricity) + float(mogas) + float(mohoafees) + float(molawn) + float(movacancy) + float(morepairs) + float(mocapex) + float(mopropmgmt) + float(momortgage)
             restwopointfive = int(res2)
-            res3 = float(mototalincome) + float(mototalexpenses)
+            res3 = float(mototalincome) - float(mototalexpenses)
             resthreepointfive = int(res3)
+            res4 = float(annualcashflow)
+            resfourpointfive = int(res4) * int(12)
+            res5 = float(onlydownpayment) + float(onlyclosingcosts) + float(onlyrehabbudget) + float(onlycontingencyfund)
+            resfivepointfive = int(res5)
+            res6 = float(myannualcashflow) / float(mytotalinvestment)
+            ressixpointfive = float(res6) * float(100)
             calc1.append(resonepointfive)
             calc1.append(restwopointfive)
             calc1.append(resthreepointfive)
+            calc1.append(resfourpointfive)
+            calc1.append(resfivepointfive)
+            calc1.append(ressixpointfive)
             print('info received') 
         else:
             print('info not received')

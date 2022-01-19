@@ -31,16 +31,17 @@ class rentalinvestingForm(FlaskForm):
     totalexpenses =  StringField('totalincome', validators=[DataRequired()])
 
     # - multiplication - calculate total monthly income (totalmonthlycashflow * 12)
-    #totalmonthlycashflow =  StringField('totalincome', validators=[DataRequired()])
+    totalmonthlycashflow =  StringField('totalincome', validators=[DataRequired()])
 
     # - addition - calculate total investment (total investment = dp + cc + rb + cf)
-    #downpayment = StringField('proptax', validators=[DataRequired()])
-    #closingcosts = StringField('proptax', validators=[DataRequired()])
-    #rehabbudget = StringField('proptax', validators=[DataRequired()])
-    #contingecyfund = StringField('proptax', validators=[DataRequired()])
+    downpayment = StringField('proptax', validators=[DataRequired()])
+    closingcosts = StringField('proptax', validators=[DataRequired()])
+    rehabbudget = StringField('proptax', validators=[DataRequired()])
+    contingencyfund = StringField('proptax', validators=[DataRequired()])
 
     # - division - calculate the cash on cash return (annual cash flow divided(/) by total invesment multiplied(*) by 100)
-    #annualcashflow = StringField('proptax', validators=[DataRequired()])
+    annualcashflow = StringField('proptax', validators=[DataRequired()])
+    totalinvestment = StringField('proptax', validators=[DataRequired()])
     #cashoncashperecentage = StringField('proptax', validators=[DataRequired()])
     submit = SubmitField()
 
