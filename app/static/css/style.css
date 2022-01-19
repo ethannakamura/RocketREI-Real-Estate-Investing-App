@@ -7,6 +7,14 @@ body{
     background-color: purple;
     border-width: 5px;
 }
+.end.btn{
+    font-size:20px;
+    background-color: rgb(223, 104, 0);
+    border-width: 5px;
+    color:purple;
+}
 #results{
-    background-color: rgba(31, 31, 31, 0.502);
+    background-color:rgba(238, 83, 0, 0.776);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
 }

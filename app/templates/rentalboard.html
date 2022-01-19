@@ -45,11 +45,12 @@
                             </div>
                         </div>
                     </div>
+                    <br>
                     {%if form%}
                     <div class="container">
                         <div class="row">
                             <div class="col-6">
-                                <p class="text-warning font-weight-bolder font-size:25px" id="results">Your Total Monthy Rental Income is: {{calc1[0]}}</p>
+                                <p class="font-weight-bolder font-size:25px" id="results">Your Total Monthy Rental Income is: ${{calc1[0]}}</p>
                             </div>
                         </div>
                     </div>
@@ -69,9 +70,19 @@
                         </div>
                     </div>
                     <br>
+                    {%if form%}
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <h6 class="font-weight-bolder font-size:25px" id="results">Your Total Monthy Expenses are: ${{calc1[1]}}</h6>
+                            </div>
+                        </div>
+                    </div>
+                    {%endif%}
+                    <br>
                     <div class = "container">
                         <div class = "row">
-                            <div class="col-6">
+                            <div class="col-6" id="submitbuttons">
                                 {{ form.submit(class="btn btn-block btn-outline-light") }}
                             </div>
                         </div>
@@ -79,15 +90,6 @@
                     <br>
                     <!--Coding Option #4 THIS WORKED
                         Create one list for each calculation, call them by index-->
-                    {%if form%}
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-warning font-weight-bolder font-size:25px" id="results">Your Total Monthy Expenses is: {{calc1[1]}}</p>
-                            </div>
-                        </div>
-                    </div>
-                    {%endif%}
 
                     <!--Results option-->
                     <!--Coding Option #3 THIS WORKED
