@@ -14,18 +14,17 @@ def rincome():
     moproptax = form.proptax.data
     moinsurance = form.insurance.data
     calc1 = []
-    calc2 = []
     if request.method == 'POST':
         if form.validate_on_submit():
             res1 = float(morentalincome) + float(momiscsvcincome)
             res2 = float(moproptax) + float(moinsurance)
             calc1.append(res1)
-            calc2.append(res2)
+            calc1.append(res2)
             print('info received')  
         else:
             print('info not received')
 
-    return render_template('rentalboard.html', form=form, calc1=calc1, calc2=calc2)
+    return render_template('rentalboard.html', form=form, calc1=calc1)
 
 # Coding Option #2 
 #----submit form rendering all form results bus only as separate list values [111,222.333]
