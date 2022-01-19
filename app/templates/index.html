@@ -26,9 +26,15 @@
 
     <br>
     <br>
-    <div class="yes btn btn-danger btn-lg-3 fw-bold">
-        <a class="text-white" href="{{ url_for('auth.signup') }}" button type="button">
-            <strong>I WANT TO</strong><br><strong>SHOOT FOR THE STARS!</strong></a>
+
+    <div class="yes btn btn-danger btn-lg fw-bold">
+        <a class="text-white text-center" id="arrows" href="{{ url_for('auth.signup') }}" button type="button">
+            <strong>I WANT TO SHOOT</strong><br><strong>FOR THE STARS!</strong></a>
+    </div>
+    <br>
+    <br>
+    <div class="arrow">
+        <img src="../static/images/orangearrow.png">
     </div>
 
     <div class="row">
@@ -73,14 +79,16 @@
             <img src="../static/images/ending.png">
         </div>
     </div>
-        <a class="end btn btn-warning btn-lg-3 fw-bold my-5 text-white" href="{{ url_for('auth.signup') }}" button type="button">
-            <strong>I WANT TO BECOME</strong><br><strong>AN INVESTONAUT!</strong></a>
-    </div>
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-5">
             <img src="../static/images/man.png">
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-2" id="join">
+            <a class="end btn btn-warning btn-lg-3 fw-bold my-5 text-white" href="{{ url_for('auth.signup') }}" button
+                type="button">
+                <strong>I WANT TO BECOME</strong><br><strong>AN INVESTONAUT!</strong></a>
+        </div>
+        <div class="col-lg-5">
             <img src="../static/images/woman.png">
         </div>
     </div>
