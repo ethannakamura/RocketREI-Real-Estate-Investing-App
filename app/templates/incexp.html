@@ -36,44 +36,48 @@
                     {{ form1.miscsvcincome(class="form-control text-center", placeholder="Enter Other Rental Income (Cell 2) ") }}
                 </fieldset>
                 <br>
-
-                <fieldset id="proptax-field">
-                    {{ form1.proptax(class="form-control text-center", placeholder="Enter Mo. Property Tax (Cell 3)") }}
-                </fieldset>
-                <br>
-
-                <fieldset id="insurance-field">
-                    {{ form1.insurance(class="form-control text-center", placeholder="Enter Mo. Insurance Cost (Cell 4)") }}
-                </fieldset>
-                <br>
-
-                <fieldset id="watersewer-field">
-                    {{ form1.watersewer(class="form-control text-center", placeholder="Enter Mo. Water/Sewer Cost (Cell 5)") }}
-                </fieldset>
-                <br>
-
-                <fieldset id="garbage-field">
-                    {{ form1.garbage(class="form-control text-center", placeholder="Enter Mo. Garbage Cost (Cell 6)") }}
-                </fieldset>
-                <br>
-
-                <fieldset id="electricity-field">
-                    {{ form1.electricity(class="form-control text-center", placeholder="Enter Mo. Electricity Cost (Cell 7)") }}
-                </fieldset>
-                <br>
+            
             </div>
-        </div>
-
+        </div> 
         <div class="row" id="ressubmit">
             <div class="col-lg-6">
                 {%if form1%}
                 <p class="font-weight-bold font-size:25px" id="results">Monthy Rental Income: ${{calc1[0]}}</p>
                 {%endif%}
                 <br>
-
             </div>
         </div>
+        <div class="container" id="placeinfo">
+            <div class="row">
+                <div class="col-md-12">
+                    <fieldset id="proptax-field">
+                        {{ form1.proptax(class="form-control text-center", placeholder="Enter Mo. Property Tax (Cell 3)") }}
+                    </fieldset>
+                    <br>
 
+                    <fieldset id="insurance-field">
+                        {{ form1.insurance(class="form-control text-center", placeholder="Enter Mo. Insurance Cost (Cell 4)") }}
+                    </fieldset>
+                    <br>
+
+                    <fieldset id="watersewer-field">
+                        {{ form1.watersewer(class="form-control text-center", placeholder="Enter Mo. Water/Sewer Cost (Cell 5)") }}
+                    </fieldset>
+                    <br>
+
+                    <fieldset id="garbage-field">
+                        {{ form1.garbage(class="form-control text-center", placeholder="Enter Mo. Garbage Cost (Cell 6)") }}
+                    </fieldset>
+                    <br>
+
+                    <fieldset id="electricity-field">
+                        {{ form1.electricity(class="form-control text-center", placeholder="Enter Mo. Electricity Cost (Cell 7)") }}
+                    </fieldset>
+                    <br>
+                </div>
+            </div>
+        </div>
+    
         <div class="row">
             <div class="col-md-12">
                 <fieldset id="gas-field">
