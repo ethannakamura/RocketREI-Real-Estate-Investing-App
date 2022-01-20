@@ -23,43 +23,43 @@ body{
     margin-top: 250px;
 }
 #ftext{
-    font-size:20px;
+    font-size:18px;
     background-color: rgba(48, 0, 103, 0.276);
 }
 #ptext{
-    font-size:20px;
+    font-size:18px;
 }
 #navhome{
-    font-size: 20px;
-    color:rgb(250, 221, 104);
-}
+    font-size: 18px;
+    color:rgb(255, 255, 255);
+} 
 #navdash{
-    font-size: 20px;
-    color:rgb(255, 150, 37);
+    font-size: 18px;
+    color:rgb(255, 255, 255);
 }
 #navapi{
-    font-size: 20px;
-    color:rgb(255, 66, 66);
+    font-size: 18px;
+    color:rgb(255, 255, 255);
 }
 #navinvest{
-    font-size: 20px;
+    font-size: 18px;
     color:rgb(255, 255, 255);
 }
 #navbutton{
     background-color: rgba(255, 137, 64, 0);
-    color: white;
-    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
 }
 #droptext1{
-    background-color: rgb(9, 0, 104);
-    font-size: 20px;
+    background-color: rgb(11, 0, 63);
+    font-size: 18px;
 }
 #droptext2{
-    background-color: rgb(86, 0, 123);
-    font-size: 20px;
+    background-color: rgb(11, 0, 63);
+    font-size: 18px;
 }
 #droptext3{
-    background-color: rgb(149, 0, 157);
+    background-color: rgb(11, 0, 63);
     font-size: 20px;
 }
 
@@ -83,7 +83,7 @@ body{
     justify-content: center;
 }
 fieldset{
-    width: 500px; 
+    width: 480px; 
     margin: auto;
 }
 
