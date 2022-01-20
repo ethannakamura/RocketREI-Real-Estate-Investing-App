@@ -6,7 +6,7 @@ from flask import render_template
 
 calculators = Blueprint('calculators',__name__, template_folder='templates')
 
-@calculators.route('/MyRentalBoard', methods=['GET', 'POST'])
+@calculators.route('/MyIncomeExpenses', methods=['GET', 'POST'])
 def rincome():
     form = rentalinvestingForm()
     morentalincome = form.rentalincome.data
@@ -59,7 +59,7 @@ def rincome():
         else:
             print('info not received')
 
-    return render_template('rentalboard.html', form=form, calc1=calc1)
+    return render_template('incexp.html', form=form, calc1=calc1)
 
 # Coding Option #2 
 #----submit form rendering all form results bus only as separate list values [111,222.333]

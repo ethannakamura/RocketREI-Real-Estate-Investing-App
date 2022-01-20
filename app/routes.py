@@ -24,3 +24,7 @@ def wholesaling():
 @app.route('/MyHouseFlipping')
 def flipping():
     return render_template('flipping.html')
+
+@app.route('/MyIncomeExpenses')
+def incexp():
+    return render_template('incexp.html')
