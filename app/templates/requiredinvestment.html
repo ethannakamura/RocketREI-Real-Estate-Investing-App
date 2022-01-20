@@ -1,0 +1,38 @@
+{% extends 'components/layout.html' %}
+
+{% block title %}Required Investment{% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <header ul class="nav col-12 col-md-auto justify-content-center">
+        <li><a href="{{ url_for('dashboard') }}" class="nav-link px-2 text-warning">Return to My Dashboard</a></li>
+
+        </ul>
+    </header>
+</div>
+
+<div class="container px-4 py-5 text-light" id="icon-grid">
+    <img src="../static/images/rentalboard.png">
+</div>
+
+<!--Place Submit Form Code Here From incexp.html-->
+
+<div class="container">
+    <br class="py-5">
+
+    <div class="row">
+        <div class="col-lg-6">
+            <a class="back btn btn-warning btn-lg-3 fw-bold text-white text-center" href="{{ url_for('mocashflow') }}"
+                button type="button">
+                <strong>GO</strong><br><strong>BACK!</strong></a>
+        </div>
+        <div class="col-lg-6">
+            <a class="next btn btn-warning btn-lg-3 fw-bold text-white text-center" href="{{ url_for('cashoncash') }}"
+                button type="button">
+                <strong>NEXT</strong><br><strong>CALCULATION!</strong></a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

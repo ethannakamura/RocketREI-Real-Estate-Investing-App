@@ -65,3 +65,17 @@ body{
 .navbar-toggler.collapsed{
     border-color: rgb(255, 255, 255);
   } 
+.next.btn{
+    font-size:25px;
+    background-color: rgb(223, 104, 0);
+    border-width: 5px;
+    color:purple;
+}
+.back.btn{
+    font-size:25px;
+    background-color: rgb(223, 104, 0);
+    border-width: 5px;
+    color:purple;
+    padding-left: 60px;
+    padding-right: 60px;
+}

@@ -25,6 +25,22 @@ def wholesaling():
 def flipping():
     return render_template('flipping.html')
 
-@app.route('/MyIncomeExpenses')
+@app.route('/InitialPropertyIncomeExpenses')
 def incexp():
     return render_template('incexp.html')
+
+@app.route('/MonthlyIncomeExpenses')
+def moincexp():
+    return render_template('moincexp.html')
+
+@app.route('/MonthlyCashflow')
+def mocashflow():
+    return render_template('mocashflow.html')
+
+@app.route('/InvestmentAmount')
+def requiredinvestment():
+    return render_template('requiredinvestment.html')
+
+@app.route('/CashonCashReturn')
+def cashoncash():
+    return render_template('cashoncash.html')

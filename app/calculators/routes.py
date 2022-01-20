@@ -6,7 +6,7 @@ from flask import render_template
 
 calculators = Blueprint('calculators',__name__, template_folder='templates')
 
-@calculators.route('/MyIncomeExpenses', methods=['GET', 'POST'])
+@calculators.route('/InitialPropertyIncomeExpenses', methods=['GET', 'POST'])
 def rincome():
     form = rentalinvestingForm()
     morentalincome = form.rentalincome.data
@@ -55,7 +55,7 @@ def rincome():
             calc1.append(resfourpointfive)
             calc1.append(resfivepointfive)
             calc1.append(ressixpointfive)
-            print('info received') 
+            print('info received')
         else:
             print('info not received')
 
