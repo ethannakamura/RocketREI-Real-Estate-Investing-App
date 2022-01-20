@@ -6,7 +6,7 @@
 
 <div class="container">
     <header ul class="nav col-12 col-md-auto justify-content-center">
-        <li><a href="{{ url_for('dashboard') }}" class="nav-link px-2 text-warning">Return to My Dashboard</a></li>
+        <li><a href="{{ url_for('dashboard') }}" class="nav-link px-2 text-warning" id="reitext">Return to My Dashboard</a></li>
 
         </ul>
     </header>
@@ -40,7 +40,7 @@
         <div class="row" id="ressubmit">
             <div class="col-lg-6">
                 {%if form5%}
-                <p class="font-weight-bold font-size:25px text-center" id="results">Cash on Cash Return: ${{cal5[0]}}%</p>
+                <p class="font-weight-bold font-size:25px text-center" id="results">Cash on Cash Return: {{calc5[0]}}%</p>
                 {%endif%}
                 <br>
 

@@ -24,7 +24,6 @@ body{
 }
 #ftext{
     font-size:18px;
-    background-color: rgba(48, 0, 103, 0.276);
 }
 #ptext{
     font-size:18px;
@@ -89,4 +88,7 @@ fieldset{
 
 #ressubmit{
     justify-content: center;
+}
+#reitext{
+    font-size: 18px;
 }

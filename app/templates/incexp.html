@@ -6,16 +6,12 @@
 
     <div class="container">
         <header ul class="nav col-12 col-md-auto justify-content-center">
-            <li><a href="{{ url_for('dashboard') }}" class="nav-link px-2 text-warning">Return to My Dashboard</a></li>
+            <li><a href="{{ url_for('dashboard') }}" class="nav-link px-2 text-warning" id="reitext">Return to My Dashboard</a></li>
 
             </ul>
         </header>
     </div>
 
-
-<div class="container px-4 py-5 text-light" id="icon-grid">
-    <img src="../static/images/rentalboard.png">
-</div>
 
 <div class="container px-4 py-5 text-light" id="icon-grid">
     <img src="../static/images/rentalcalc.png">
@@ -28,12 +24,12 @@
         <div class="row">
             <div class="col-md-12">
                 <fieldset id="rentalincome-field">
-                    {{ form1.rentalincome(class="form-control text-center", placeholder="Enter Monthly (Mo.) Rental Income (Cell 1)") }}
+                    {{ form1.rentalincome(class="form-control text-center", placeholder="Enter Monthly Rental Income") }}
                 </fieldset>
                 <br>
 
                 <fieldset id="miscsvcincome-field">
-                    {{ form1.miscsvcincome(class="form-control text-center", placeholder="Enter Other Rental Income (Cell 2) ") }}
+                    {{ form1.miscsvcincome(class="form-control text-center", placeholder="Enter Other Rental Income") }}
                 </fieldset>
                 <br>
             
@@ -51,27 +47,27 @@
             <div class="row">
                 <div class="col-md-12">
                     <fieldset id="proptax-field">
-                        {{ form1.proptax(class="form-control text-center", placeholder="Enter Mo. Property Tax (Cell 3)") }}
+                        {{ form1.proptax(class="form-control text-center", placeholder="Enter Monthly Property Tax") }}
                     </fieldset>
                     <br>
 
                     <fieldset id="insurance-field">
-                        {{ form1.insurance(class="form-control text-center", placeholder="Enter Mo. Insurance Cost (Cell 4)") }}
+                        {{ form1.insurance(class="form-control text-center", placeholder="Enter Monthly Insurance Cost") }}
                     </fieldset>
                     <br>
 
                     <fieldset id="watersewer-field">
-                        {{ form1.watersewer(class="form-control text-center", placeholder="Enter Mo. Water/Sewer Cost (Cell 5)") }}
+                        {{ form1.watersewer(class="form-control text-center", placeholder="Enter Monthly Water/Sewer Cost") }}
                     </fieldset>
                     <br>
 
                     <fieldset id="garbage-field">
-                        {{ form1.garbage(class="form-control text-center", placeholder="Enter Mo. Garbage Cost (Cell 6)") }}
+                        {{ form1.garbage(class="form-control text-center", placeholder="Enter Monthly Garbage Cost") }}
                     </fieldset>
                     <br>
 
                     <fieldset id="electricity-field">
-                        {{ form1.electricity(class="form-control text-center", placeholder="Enter Mo. Electricity Cost (Cell 7)") }}
+                        {{ form1.electricity(class="form-control text-center", placeholder="Enter Monthly Electricity Cost") }}
                     </fieldset>
                     <br>
                 </div>
@@ -81,42 +77,42 @@
         <div class="row">
             <div class="col-md-12">
                 <fieldset id="gas-field">
-                    {{ form1.gas(class="form-control text-center", placeholder="Enter Mo. Gas Cost (Cell 8)") }}
+                    {{ form1.gas(class="form-control text-center", placeholder="Enter Monthly Gas Cost") }}
                 </fieldset>
                 <br>
 
                 <fieldset id="hoafees-field">
-                    {{ form1.hoafees(class="form-control text-center", placeholder="Enter Mo. HOA Fees (Cell 9)") }}
+                    {{ form1.hoafees(class="form-control text-center", placeholder="Enter Monthly HOA Fees") }}
                 </fieldset>
                 <br>
 
                 <fieldset id="lawn-field">
-                    {{ form1.lawn(class="form-control text-center", placeholder="Enter Mo. Lawn Maintenance Cost (Cell 10)") }}
+                    {{ form1.lawn(class="form-control text-center", placeholder="Enter Monthly Lawn Maintenance Cost") }}
                 </fieldset>
                 <br>
 
                 <fieldset id="vacancy-field">
-                    {{ form1.vacancy(class="form-control text-center", placeholder="Enter Mo. Vacancy Savings (Cell 11)") }}
+                    {{ form1.vacancy(class="form-control text-center", placeholder="Enter Monthly Vacancy Savings") }}
                 </fieldset>
                 <br>
 
                 <fieldset id="repairs-field">
-                    {{ form1.repairs(class="form-control text-center", placeholder="Enter Mo. Repair Savings (Cell 12)") }}
+                    {{ form1.repairs(class="form-control text-center", placeholder="Enter Monthly Repair Savings") }}
                 </fieldset>
                 <br>
 
                 <fieldset id="capex-field">
-                    {{ form1.capex(class="form-control text-center", placeholder="Enter Mo. Capex Savings (Cell 13)") }}
+                    {{ form1.capex(class="form-control text-center", placeholder="Enter Monthly Capex Savings") }}
                 </fieldset>
                 <br>
 
                 <fieldset id="propmgmt-field">
-                    {{ form1.propmgmt(class="form-control text-center", placeholder="Enter Mo. Property Management Cost (Cell 14)") }}
+                    {{ form1.propmgmt(class="form-control text-center", placeholder="Enter Monthly Property Management Cost") }}
                 </fieldset>
                 <br>
 
                 <fieldset id="mortgage-field">
-                    {{ form1.mortgage(class="form-control text-center", placeholder="Enter Mo. Property Mortgage Cost (Cell 15)") }}
+                    {{ form1.mortgage(class="form-control text-center", placeholder="Enter Monthly Property Mortgage Cost") }}
                 </fieldset>
                 <br>
 

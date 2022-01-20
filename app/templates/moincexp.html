@@ -6,7 +6,7 @@
 
 <div class="container">
     <header ul class="nav col-12 col-md-auto justify-content-center">
-        <li><a href="{{ url_for('dashboard') }}" class="nav-link px-2 text-warning">Return to My Dashboard</a></li>
+        <li><a href="{{ url_for('dashboard') }}" class="nav-link px-2 text-warning" id="reitext">Return to My Dashboard</a></li>
 
         </ul>
     </header>
@@ -23,12 +23,12 @@
         <div class="row">
             <div class="col-lg-12">
                 <fieldset id="totalincome-field">
-                    {{ form2.totalincome(class="form-control text-center", placeholder="Enter Total Mo. Rental Income (From Section Total) (Cell 16)") }}
+                    {{ form2.totalincome(class="form-control text-center", placeholder="Enter Total Monthly Rental Income") }}
                 </fieldset>
                 <br>
     
                 <fieldset  id="totalexpenses-field">
-                    {{ form2.totalexpenses(class="form-control text-center", placeholder="Enter Total Mo. Rental Expenses (From Section Total) (Cell 17)") }}
+                    {{ form2.totalexpenses(class="form-control text-center", placeholder="Enter Total Monthly Rental Expenses") }}
                 </fieldset>
                 <br>
             </div>
