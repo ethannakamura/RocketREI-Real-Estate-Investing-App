@@ -1,6 +1,6 @@
 {% extends 'components/layout.html' %}
 
-{% block title %}Income & Expenses{% endblock title %}
+{% block title %}Monthly Income & Expenses{% endblock title %}
 
 {% block content %}
 
@@ -17,25 +17,25 @@
 </div>
 
 
-
 <form method="POST" id="placeinfo">
     {{ form2.hidden_tag() }}
     <div class="container" id="placeinfo">
         <div class="row">
             <div class="col-lg-12">
                 <fieldset id="totalincome-field">
-                    {{ form2.totalincome(class="form-control text-center", placeholder="Enter Mo. Rental Income (From Section Total) (Cell 16)") }}
+                    {{ form2.totalincome(class="form-control text-center", placeholder="Enter Total Mo. Rental Income (From Section Total) (Cell 16)") }}
                 </fieldset>
                 <br>
     
                 <fieldset  id="totalexpenses-field">
-                    {{ form2.totalexpenses(class="form-control text-center", placeholder="Enter Mo. Rental Expenses (From Section Total) (Cell 17)") }}
+                    {{ form2.totalexpenses(class="form-control text-center", placeholder="Enter Total Mo. Rental Expenses (From Section Total) (Cell 17)") }}
                 </fieldset>
                 <br>
             </div>
         </div>
         <div class="row" id="ressubmit">
             <div class="col-lg-6">
+                <div>
                 {%if form2%}
                 <p class="font-weight-bold font-size:25px text-center" id="results">Monthly Cashflow: ${{calc2[0]}}</p>
                 {%endif%}

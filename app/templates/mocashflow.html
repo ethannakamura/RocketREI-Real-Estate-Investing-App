@@ -18,21 +18,48 @@
 
 <!--Place Submit Form Code Here From incexp.html-->
 
-<div class="container">
-    <br class="py-5">
+<form method="POST" id="placeinfo">
+    {{ form3.hidden_tag() }}
+    <div class="container" id="placeinfo">
+        <div class="row">
+            <div class="col-lg-12">
+                <fieldset id="totalincome-field">
+                    {{ form3.totalmonthlycashflow(class="form-control text-center", placeholder="Enter Your Total Monthly Cashflow") }}
+                </fieldset>
+                <br>
 
-    <div class="row">
-        <div class="col-lg-6">
-            <a class="back btn btn-warning btn-lg-3 fw-bold text-white text-center" href="{{ url_for('moincexp') }}"
-                button type="button">
-                <strong>GO</strong><br><strong>BACK!</strong></a>
+            </div>
         </div>
-        <div class="col-lg-6">
-            <a class="next btn btn-warning btn-lg-3 fw-bold text-white text-center" href="{{ url_for('requiredinvestment') }}"
-                button type="button">
-                <strong>NEXT</strong><br><strong>CALCULATION!</strong></a>
+        <div class="row" id="ressubmit">
+            <div class="col-lg-6">
+                {%if form3%}
+                <p class="font-weight-bold font-size:25px text-center" id="results">Annual Cashflow: ${{calc3[0]}}</p>
+                {%endif%}
+                <br>
+
+                {{ form3.submit(class="btn submit btn-lg btn-block btn-outline-light text-center") }}
+            </div>
         </div>
     </div>
-</div>
+    
+        <div class="container">
+            <br class="py-5">
+        
+            <div class="row">
+                <div class="col-lg-6">
+                    <a class="back btn btn-warning btn-lg-3 fw-bold text-white text-center" href="{{ url_for('moincexp') }}"
+                        button type="button">
+                        <strong>GO</strong><br><strong>BACK!</strong></a>
+                </div>
+                <div class="col-lg-6">
+                    <a class="next btn btn-warning btn-lg-3 fw-bold text-white text-center" href="{{ url_for('requiredinvestment') }}"
+                        button type="button">
+                        <strong>NEXT</strong><br><strong>CALCULATION!</strong></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form> 
+
 
 {% endblock content %}

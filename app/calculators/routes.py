@@ -64,7 +64,8 @@ def moincexp():
 
     return render_template('moincexp.html', form2=form2, calc2=calc2)
 
-
+# here they only type in monthly cashflow you db return their result so they can enter it and
+# you only have them enter annualcashflow at the end to calculate cashoncashreturn
 @calculators.route('/MonthlyCashflow', methods=['GET', 'POST'])
 def mocashflow():   
     form3 = totalmonthlycashflowForm()
@@ -82,7 +83,7 @@ def mocashflow():
         else:
             print('info not received')
 
-    return render_template('moincexp.html', form3=form3, calc3=calc3)
+    return render_template('mocashflow.html', form3=form3, calc3=calc3)
 
 @calculators.route('/InvestmentAmount', methods=['GET', 'POST'])
 def requiredinvestment():
@@ -105,13 +106,13 @@ def requiredinvestment():
         else:
             print('info not received')
 
-    return render_template('moincexp.html', form4=form4, calc4=calc4)
+    return render_template('requiredinvestment.html', form4=form4, calc4=calc4)
 
 @calculators.route('/CashonCashReturn', methods=['GET', 'POST'])
 def cashoncash():
     form5 = cashoncashreturnForm()
-    myannualcashflow = form.annualcashflow.data
-    mytotalinvestment = form.totalinvestment.data
+    myannualcashflow = form5.annualcashflow.data
+    mytotalinvestment = form5.totalinvestment.data
 
     calc5 = []
 
@@ -126,56 +127,4 @@ def cashoncash():
         else:
             print('info not received')
 
-    return render_template('moincexp.html', form5=form5, calc5=calc5)
-
-# Coding Option #2 
-#----submit form rendering all form results bus only as separate list values [111,222.333]
-# found out that I can import numpy, and numpy has various math methods add/divide/multiply:
-# numpy.prod(multiply list items)
-
-#@calculators.route('/MyRentalBoard', methods=['GET', 'POST'])
-#def rincome():
-    #form = rentalinvestingForm()
-    #morentalincome = form.rentalincome.data
-    #momiscsvcincome = form.miscsvcincome.data
-    #moproptax = form.proptax.data
-    #moinsurance = form.insurance.data
-
-    #res1 = [morentalincome, momiscsvcincome]
-    #res2 = [moproptax, moinsurance]
-    #calc1 = [res1, res2]
-    #if request.method == 'POST':
-        #if form.validate_on_submit():
-            #print('info received')  
-        #else:
-            #print('info not received')
-
-    #return render_template('rentalboard.html', form=form, calc1=calc1, res1=res1, res2=res2)
-
-# Coding Option #1
-#----second submit not validating second form only validating first form
-#@calculators.route('/MyRentalBoard', methods=['GET', 'POST'])
-#def rincome():
-    #form = rentalincomeForm()
-    #morentalincome = form.rentalincome.data
-    #momiscsvcincome = form.miscsvcincome.data
-    #form2 = rentalexpensesForm() <--you'll have to create an expenses form for this
-    #moproptax = form2.proptax.data
-    #moinsurance = form2.insurance.data
-    #tmi2 = []
-    #tmi3 = []
-    #if request.method == 'POST':
-        #if form.validate_on_submit():
-            #tmi = float(morentalincome) + float(momiscsvcincome)
-            #tmi2.append(tmi)
-            #print('info received1')  
-        #elif form2.validate_on_submit():
-            #tmi = float(moproptax) + float(moinsurance)
-            #tmi3.append(tmi)
-            #print('info received2')
-        #else:
-            #print('info not received')
-
-    #return render_template('rentalboard.html', form=form, form2=form2, tmi2=tmi2, tmi3=tmi3)
-
-#no returns in if statements have a dictionary
+    return render_template('cashoncash.html', form5=form5, calc5=calc5)
