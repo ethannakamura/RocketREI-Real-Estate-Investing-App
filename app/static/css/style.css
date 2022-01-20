@@ -14,8 +14,9 @@ body{
     color:purple;
 }
 #results{
-    background-color:rgba(255, 98, 0, 0.454);
-    color: rgb(244, 195, 0);
+    background-color:rgb(223, 104, 0);
+    outline: auto;
+    color: rgb(255, 255, 255);
     font-size: 18px;
 }
 #join{
@@ -70,6 +71,7 @@ body{
     background-color: rgb(223, 104, 0);
     border-width: 5px;
     color:purple;
+    justify-content: center;
 }
 .back.btn{
     font-size:25px;
@@ -78,4 +80,13 @@ body{
     color:purple;
     padding-left: 60px;
     padding-right: 60px;
+    justify-content: center;
+}
+fieldset{
+    width: 500px; 
+    margin: auto;
+}
+
+#ressubmit{
+    justify-content: center;
 }
