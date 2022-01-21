@@ -21,37 +21,33 @@
                 {{ form.hidden_tag() }}
                 <div class="container id=placeinfo">
                     <div class="form-group">
-                        <fieldset id="username-field">
-                            {{form.username.label}}
+                        <fieldset class="usersignup" id="username-field">
                             {{form.username(class="form-control text-center", placeholder="Enter Your Username")}}
                         </fieldset>
                         <br>
-                        <fieldset id="email-field">
-                            {{form.email.label}}
-                            {{form.email(class="form-control text-center", placeholder="Enter Your Email (rocket@gmail.com)")}}
+                        <fieldset class="usersignup" id="email-field">
+                            {{form.email(class="form-control text-center", placeholder="Enter Your Email")}}
                         </fieldset>
                         <br>
-                        <fieldset id="first_name-field">
-                            {{form.first_name.label}}
+                        <fieldset class="usersignup" id="first_name-field">
                             {{form.first_name(class="form-control text-center", placeholder="Enter Your First Name")}}
                         </fieldset>
                         <br>
-                        <fieldset id="last_name-field">
-                            {{form.last_name.label}}
+                        <fieldset class="usersignup" id="last_name-field">
                             {{form.last_name(class="form-control text-center", placeholder="Enter Your Last Name")}}
                         </fieldset>
                         <br>
-                        <fieldset id="password-field">
-                            {{form.password.label}}
+                        <fieldset class="usersignup" id="password-field">
                             {{form.password(class="form-control text-center", placeholder="Enter Your Password")}}
                         </fieldset>
                         <br>
-                        <fieldset id="confirm_password-field">
-                            {{form.confirm_password.label}}
+                        <fieldset class="usersignup" id="confirm_password-field">
                             {{form.confirm_password(class="form-control text-center justify-content-center", placeholder="Confirm Your Password")}}
                         </fieldset>
                         <br>
+                        <fieldset class="usersignup">
                         {{form.submit(class="btn btn-block btn-outline-light")}}
+                        </fieldset>
                         <br>
                         <small class="text-white">By clicking Sign Up, you agree to our terms of use.</small>
                         <br>

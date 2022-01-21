@@ -39,12 +39,16 @@
 
         <div class="row" id="ressubmit">
             <div class="col-lg-6">
+                <fieldset>
                 {%if form5%}
                 <p class="font-weight-bold font-size:25px text-center" id="results">Cash on Cash Return: {{calc5[0]}}%</p>
                 {%endif%}
                 <br>
-
+                </fieldset>
+                
+                <fieldset>
                 {{ form5.submit(class="btn submit btn-lg btn-block btn-outline-light text-center") }}
+                </fieldset>
             </div>
         </div>
     </div>

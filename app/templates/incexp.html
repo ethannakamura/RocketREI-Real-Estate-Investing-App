@@ -37,10 +37,12 @@
         </div> 
         <div class="row" id="ressubmit">
             <div class="col-lg-6">
+                <fieldset>
                 {%if form1%}
                 <p class="font-weight-bold font-size:25px" id="results">Monthy Rental Income: ${{calc1[0]}}</p>
                 {%endif%}
                 <br>
+                </fieldset>
             </div>
         </div>
         <div class="container" id="placeinfo">
@@ -120,13 +122,16 @@
         </div>
         
         <div class="row" id="ressubmit">
-            <div class="col-lg-6">
+            <div class="rentalforms col-lg-6">
+                <fieldset>
                 {%if form1%}
                 <p class="font-weight-bold font-size:25px" id="results">Montlhy Rental Expenses: ${{calc1[1]}}</p>
                 {%endif%}
                 <br>
-
+                </fieldset>
+                <fieldset>
                 {{ form1.submit(class="btn submit btn-lg btn-block btn-outline-light text-center") }}
+                </fieldset>
             </div>
         </div>
 

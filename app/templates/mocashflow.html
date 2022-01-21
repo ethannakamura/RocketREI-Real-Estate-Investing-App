@@ -30,12 +30,16 @@
         </div>
         <div class="row" id="ressubmit">
             <div class="col-lg-6">
+                <fieldset>
                 {%if form3%}
                 <p class="font-weight-bold font-size:25px text-center" id="results">Annual Cashflow: ${{calc3[0]}}</p>
                 {%endif%}
                 <br>
+                </fieldset>
 
+                <fieldset>
                 {{ form3.submit(class="btn submit btn-lg btn-block btn-outline-light text-center") }}
+                </fieldset>
             </div>
         </div>
     </div>

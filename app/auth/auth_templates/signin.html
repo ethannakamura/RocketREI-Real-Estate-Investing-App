@@ -20,18 +20,18 @@
                 {{ form.hidden_tag() }}
                 <div class="container id=placeinfo">
                     <div class="form-group">
-                        <fieldset id="username-field">
-                            {{ form.username.label }}
+                        <fieldset class="loginforms" id="username-field">
                             {{ form.username(class="form-control text-center", placeholder="Enter Your Username") }}
                         </fieldset>
                         <br>
-                        <fieldset id="password-field">
-                            {{ form.password.label }}
+                        <fieldset class="loginforms" id="password-field">
                             {{ form.password(class="form-control text-center", placeholder="Enter Your Password") }}
                         </fieldset>
+                        <fieldset class="loginforms">
                         <br>
                         {{ form.submit(class="btn btn-block btn-outline-light") }}
                         <br>
+                        </fieldset>
                         <img src="../../static/images/welcomeback.png" id="logo">
                     </div>
                 </div>

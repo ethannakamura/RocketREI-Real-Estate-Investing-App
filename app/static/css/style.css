@@ -63,23 +63,23 @@ body{
     border-color: rgb(255, 255, 255);
   } 
 .next.btn{
-    font-size:20px;
+    font-size:17px;
     background-color: rgb(223, 104, 0);
     border-width: 5px;
     color:rgb(255, 255, 255);
     justify-content: center;
 }
 .back.btn{
-    font-size:20px;
+    font-size:17px;
     background-color: rgb(223, 104, 0);
     border-width: 5px;
     color:rgb(255, 255, 255);
-
     justify-content: center;
 }
-fieldset{
-    width: 480px; 
-    margin: auto;
+
+.loginforms{
+    width:480px;
+    margin:auto;
 }
 
 #ressubmit{
@@ -90,4 +90,17 @@ fieldset{
 }
 .use{
     width:300px;
+}
+.usersignup{
+    width:280px;
+    margin: auto;
+}
+
+#rentalforms{
+    width:280px;
+}
+
+fieldset{
+    width: 350px; 
+    margin: auto;
 }
