@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, request, redirect, url_for
+
 from app.forms import signupForm, signinForm
 
 # imports for working with our User model and signing users up and logins
@@ -16,7 +17,17 @@ def signin():
         if form.validate_on_submit():
             print('This user is ready to be checked for correct username and password')
             print(form.username.data, form.password.data)
+            user = User.query.filter_by(username=form.username.data).first()
+            if user is None or not check_password_hash(user.password, form.password.data):
+                #username didn't exist or user gave the wrong password
+                print('failed login attempt')
+                return redirect(url_for('auth.signin'))
+            
+            # there's an implied else here - the username & pass matched a user in our db
+            login_user(user)
+            print(f'Thanks for logging in, {user.username}!')
             return redirect(url_for('dashboard'))
+
         else:
             print('Bad form input, try again')
             return redirect(url_for('auth.signin'))
@@ -42,7 +53,7 @@ def signup():
 
             print('New user registered!')
             login_user(new_user)
-            return redirect(url_for('dashboard'))
+            return redirect(url_for('auth.signin'))
         else:
 
             print('Bad form input, try again')
@@ -52,4 +63,6 @@ def signup():
 
 @auth.route('/logout')
 def logout():
-    return render_template('logout.html')
+    logout_user()
+    print('You have successfully logged out.')
+    return redirect(url_for('Goodbye'))

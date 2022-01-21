@@ -44,3 +44,7 @@ def requiredinvestment():
 @app.route('/CashonCashReturn')
 def cashoncash():
     return render_template('cashoncash.html')
+
+@app.route('/Loggedout')
+def Goodbye():
+    return render_template('logout.html')
