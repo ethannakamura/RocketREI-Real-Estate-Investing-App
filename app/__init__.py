@@ -1,26 +1,40 @@
+#__init__.py estabs comms between our apps and svcs
 from flask import Flask
 from config import Config
 
+# my blueprints
 from .api.routes import api
 from .auth.routes import auth
-from .calculators.routes import calculators
 
-from .models import db
+# my db info (instance of db obj)
+# import db login mngr from my models file
+from .models import db, login
 from flask_migrate import Migrate
 
+from .calculators.routes import calculators
+
+# create instance of my flask obj (creation of flask app)
 app = Flask(__name__)
 
+# configs my flask app based on config class
 app.config.from_object(Config)
 
-# urlprefix defines inside() of route when accessing in url
-# so we dont need to define in route
+# register my bp's - creates comms
 app.register_blueprint(api)
 app.register_blueprint(auth)
 app.register_blueprint(calculators)
 
+# creates my ORM and Migrate comms
 db.init_app(app)
 migrate = Migrate(app, db)
 
+# configs my login mngr
+login.init_app(app)
+# stops unlogged user from accessing a page and redirects
+login.login_view = 'auth.signin'
+
+# allows my whole app's access to comm w/routes
 from . import routes
 
-#__init__.py is about creating communication between our apps and services
+# let app/flask obj access my db models
+from . import models

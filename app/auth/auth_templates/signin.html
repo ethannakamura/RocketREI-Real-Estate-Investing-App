@@ -13,7 +13,7 @@
     <div>
         <img class="border border-white" src="../../static/images/login.gif">
     </div>
-
+    
     <div class="row text-white my-3">
         <div class="mx-auto">
             <form method="POST">
@@ -21,10 +21,12 @@
                 <div class="container id=placeinfo">
                     <div class="form-group">
                         <fieldset id="username-field">
+                            {{ form.username.label }}
                             {{ form.username(class="form-control text-center", placeholder="Enter Your Username") }}
                         </fieldset>
                         <br>
                         <fieldset id="password-field">
+                            {{ form.password.label }}
                             {{ form.password(class="form-control text-center", placeholder="Enter Your Password") }}
                         </fieldset>
                         <br>
@@ -37,4 +39,4 @@
         </div>
     </div>
 </div>
-    {% endblock content %}
+{% endblock content %}
