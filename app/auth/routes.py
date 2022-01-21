@@ -1,4 +1,5 @@
-from flask import Blueprint, render_template, request, redirect, url_for
+from distutils.log import warn
+from flask import Blueprint, render_template, request, redirect, url_for, flash
 
 from app.forms import signupForm, signinForm
 
@@ -20,16 +21,16 @@ def signin():
             user = User.query.filter_by(username=form.username.data).first()
             if user is None or not check_password_hash(user.password, form.password.data):
                 #username didn't exist or user gave the wrong password
-                print('failed login attempt')
+                flash('_INCORRECT_USERNAME_OR_PASSWORD_PLEASE_TRY_AGAIN', category='warning')
                 return redirect(url_for('auth.signin'))
             
             # there's an implied else here - the username & pass matched a user in our db
             login_user(user)
-            print(f'Thanks for logging in, {user.username}!')
+            flash(f'_LOGIN_SUCCESSFUL', category='info')
             return redirect(url_for('dashboard'))
 
         else:
-            print('Bad form input, try again')
+            flash('_INCORRECT_USERNAME_OR_PASSWORD_PLEASE_TRY_AGAIN', category='warning')
             return redirect(url_for('auth.signin'))
 
     return render_template('signin.html', form=form)
@@ -48,15 +49,15 @@ def signup():
                 db.session.commit() # save that change to db
 
             except:
-                print('Username or email taken')
+                flash('_USERNAME_OR_EMAIL_TAKEN_PLEASE_TRY_AGAIN', category='warning')
                 return redirect(url_for('auth.signup'))
 
-            print('New user registered!')
             login_user(new_user)
+            flash(f'_YOUR_ACCOUNT_HAS_BEEN_CREATED', category='info' )
             return redirect(url_for('auth.signin'))
         else:
 
-            print('Bad form input, try again')
+            flash('_INCORRECT_USERNAME_OR_PASSWORD_PLEASE_TRY_AGAIN', category='warning')
             return redirect(url_for('auth.signup'))
 
     return render_template('signup.html', form=form)
@@ -64,5 +65,5 @@ def signup():
 @auth.route('/logout')
 def logout():
     logout_user()
-    print('You have successfully logged out.')
+    flash('_LOGOUT_SUCCESSFUL')
     return redirect(url_for('Goodbye'))
