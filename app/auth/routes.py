@@ -4,7 +4,7 @@ from app.forms import signupForm, signinForm, updateUsernameForm, updateUsername
 
 # imports for working with our User model and signing users up and logins
 from app.models import  db, User
-from flask_login import login_user, logout_user, current_user, login_required
+from flask_login import login_user, logout_user, current_user, login_required, user_accessed
 from werkzeug.security import check_password_hash
 
 auth = Blueprint('auth',__name__, template_folder='auth_templates', url_prefix='/auth')
@@ -80,10 +80,14 @@ def profile():
     form = updateUsernameForm()
     if request.method == 'POST':
         if form.validate_on_submit() and check_password_hash(current_user.password, form.password.data):
-            current_user.username = form.newusername.data
-            db.session.commit()
-            flash('_USERNAME_UPDATE_SUCCESSFUL!', category='success')    
-            return redirect(url_for('auth.profile'))
+            if User.query.filter_by(username=form.newusername.data).first():
+                flash('_USERNAME_ALREADY_TAKEN_PLEASE_TRY_A_DIFFERENT_USERNAME', category='danger')
+                return redirect(url_for('auth.profile'))
+            else:
+                current_user.username = form.newusername.data
+                db.session.commit()
+                flash('_USERNAME_UPDATE_SUCCESSFUL!', category='success')    
+                return redirect(url_for('auth.profile'))
         else: 
             flash('_INCORRECT_PASSWORD_PLEASE_TRY_AGAIN', category='danger')    
             return redirect(url_for('auth.profile'))
