@@ -39,6 +39,9 @@ class totalmonthlycashflowForm(FlaskForm):
     submit = SubmitField('Calculate!')
 
 class requiredinvestmentForm(FlaskForm):
+    # - multiplication - calculate total monthly income (totalmonthlycashflow * 12)
+    annualcashflow =  StringField('totalincome', validators=[DataRequired()])
+
     # - addition - calculate total investment (total investment = dp + cc + rb + cf)
     downpayment = StringField('proptax', validators=[DataRequired()])
     closingcosts = StringField('proptax', validators=[DataRequired()])

@@ -108,6 +108,7 @@ def mocashflow():
 @calculators.route('/InvestmentAmount', methods=['GET', 'POST'])
 def requiredinvestment():
     form4 = requiredinvestmentForm()
+    annualcashflow = form4.annualcashflow.data
     onlydownpayment = form4.downpayment.data
     onlyclosingcosts = form4.closingcosts.data
     onlyrehabbudget = form4.rehabbudget.data
@@ -117,13 +118,18 @@ def requiredinvestment():
 
     if request.method == 'POST':
         if form4.validate_on_submit():
-            res5 = float(onlydownpayment) + float(onlyclosingcosts) + float(onlyrehabbudget) + float(onlycontingencyfund)
-            resfivepointfive = int(res5)
+            anncashmath = float(annualcashflow)
+            reqinvestmentmath = float(onlydownpayment) + float(onlyclosingcosts) + float(onlyrehabbudget) + float(onlycontingencyfund)
 
-            calc4.append(resfivepointfive)
+            anncash = int(anncashmath)
+            reqinvestment = int(reqinvestmentmath)
 
-            flash1 = str(resfivepointfive)
-            final = (f'Your Required Investment: ${flash1} --- PASTE YOUR ANNUAL CASHFLOW AMOUNT IN THE TOP FORM')
+            calc4.append(anncash)
+            calc4.append(reqinvestmentmath)
+
+            flash1 = str(anncash)
+            flash2 = str(reqinvestment)
+            final = (f'Your Annual Cashflow: ${flash1} & Required Investment: ${flash2}')
 
             print('info received')
             flash(final, category='success')
