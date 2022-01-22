@@ -5,18 +5,46 @@
 {% block content %}
 <div class="row">
     <div class="col">
-        <table>
-            <th>
-                Hi, {{ current_user.username }}.
-            </th>
-            <tr>
-                {{ current_user.__dict__}}
-            </tr>
-        </table>
-    </div>
-
-    <div class="col">
-
+        {{ form.hidden_tag() }}
+        <div class="list-group">
+            <br>
+            <img class="profileinfo" src="../../static/images/profileinfo.png">
+            <br>
+            <fieldset>
+                <button type="button" class="list-group-item list-group-item-action"><strong>Username:</strong> {{ current_user.username }}</button>
+                <button type="button" class="list-group-item list-group-item-action"><strong>Name:</strong> {{ current_user.first_name }} {{ current_user.last_name }}</button>
+                <button type="button" class="list-group-item list-group-item-action"><strong>Email:</strong> {{ current_user.email }}</button>
+            </fieldset>
+        </div>
     </div>
 </div>
+<div class="row">
+    <div class="col">
+        <br>
+        <img src="../../static/images/username.png">
+        <br>
+        <br>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                <fieldset class="newusername" id="newusername-field">
+                    {{ form.newusername(class="form-control text-center", placeholder="Enter New Username") }}
+                </fieldset>
+                <br>
+                <fieldset class="password" id="password-field">
+                    {{ form.password(class="form-control text-center", placeholder="Enter Your Password") }}
+                </fieldset>
+                <fieldset class="loginforms">
+                <br>
+                <fieldset class="usernamechange">
+                    {{ form.submit(class="btn btn-block btn-outline-light") }}
+                </fieldset>
+                <br>
+                </fieldset>
+                <img src="../../static/images/welcomeback.png" id="logo">
+            </div>
+        </form>
+    </div>
+</div>
+
 {% endblock content %}

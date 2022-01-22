@@ -1,6 +1,6 @@
 from distutils.log import warn
 from flask import Blueprint, render_template, request, redirect, url_for, flash
-from app.forms import signupForm, signinForm
+from app.forms import signupForm, signinForm, updateUsernameForm, updateUsernameForm
 
 # imports for working with our User model and signing users up and logins
 from app.models import  db, User
@@ -74,8 +74,19 @@ def logout():
 def dashboard():
     return render_template('dashboard.html')
 
-@auth.route('/profile')
+@auth.route('/profile', methods=['GET', 'POST'])
 @login_required
 def profile():
+    form = updateUsernameForm()
+    if request.method == 'POST':
+        if form.validate_on_submit() and check_password_hash(current_user.password, form.password.data):
+            current_user.username = form.newusername.data
+            db.session.commit()
+            flash('_USERNAME_UPDATE_SUCCESSFUL!', category='success')    
+            return redirect(url_for('auth.profile'))
+        else: 
+            flash('_INCORRECT_PASSWORD_PLEASE_TRY_AGAIN', category='danger')    
+            return redirect(url_for('auth.profile'))
 
-    return render_template('profile.html')
+    return render_template('profile.html', form=form)
+

@@ -11,9 +11,14 @@ class signupForm(FlaskForm):
     confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
     first_name = StringField('First Name', validators=[DataRequired()])
     last_name = StringField('Last Name', validators=[DataRequired()])
-    submit = SubmitField()
+    submit = SubmitField('Sign Me Up!')
 
 class signinForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
-    submit = SubmitField()
+    submit = SubmitField('Log Me In!')
+
+class updateUsernameForm(FlaskForm):
+    newusername = StringField('New Username', validators=[DataRequired()])
+    password = PasswordField('Password', validators=[DataRequired()])
+    submit = SubmitField('Change My Username!')

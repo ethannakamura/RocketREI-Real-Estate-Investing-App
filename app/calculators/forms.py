@@ -9,7 +9,7 @@ class initialincomeandexpensesForm(FlaskForm):
     # - addition - calculate total monthly income
     rentalincome = StringField('rentalincome', validators=[DataRequired()])
     miscsvcincome = StringField('miscsvcincome', validators=[DataRequired()])
-    submit = SubmitField()
+    submit = SubmitField('Calculate!')
 
     # - addition - calculate total monthly expenses 
     proptax = StringField('proptax', validators=[DataRequired()])
@@ -25,18 +25,18 @@ class initialincomeandexpensesForm(FlaskForm):
     capex = StringField('capex', validators=[DataRequired()])
     propmgmt = StringField('propmgmt', validators=[DataRequired()])
     mortgage = StringField('mortgage', validators=[DataRequired()])
-    submit = SubmitField()
+    submit = SubmitField('Calculate!')
 
 class totalincomeandexpensesForm(FlaskForm):
     # - substraction - calculate total monthly cash flow (total income - total expenses)
     totalincome =  StringField('totalincome', validators=[DataRequired()])
     totalexpenses =  StringField('totalincome', validators=[DataRequired()])
-    submit = SubmitField()
+    submit = SubmitField('Calculate!')
 
 class totalmonthlycashflowForm(FlaskForm):
     # - multiplication - calculate total monthly income (totalmonthlycashflow * 12)
     totalmonthlycashflow =  StringField('totalincome', validators=[DataRequired()])
-    submit = SubmitField()
+    submit = SubmitField('Calculate!')
 
 class requiredinvestmentForm(FlaskForm):
     # - addition - calculate total investment (total investment = dp + cc + rb + cf)
@@ -44,14 +44,14 @@ class requiredinvestmentForm(FlaskForm):
     closingcosts = StringField('proptax', validators=[DataRequired()])
     rehabbudget = StringField('proptax', validators=[DataRequired()])
     contingencyfund = StringField('proptax', validators=[DataRequired()])
-    submit = SubmitField()
+    submit = SubmitField('Calculate!')
 
 class cashoncashreturnForm(FlaskForm):
     # - division - calculate the cash on cash return (annual cash flow divided(/) by total invesment multiplied(*) by 100)
     annualcashflow = StringField('proptax', validators=[DataRequired()])
     totalinvestment = StringField('proptax', validators=[DataRequired()])
     #cashoncashperecentage = StringField('proptax', validators=[DataRequired()])
-    submit = SubmitField()
+    submit = SubmitField('Calculate!')
 
 
 #below code was used for Coding Options #1 in creating calculator forms in the rentalboard route:
