@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, flash, redirect, url_for
 
 from app.calculators.forms import initialincomeandexpensesForm, totalincomeandexpensesForm, totalmonthlycashflowForm, requiredinvestmentForm, cashoncashreturnForm
 
@@ -38,7 +38,13 @@ def incexp():
             calc1.append(resonepointfive)
             calc1.append(restwopointfive)
 
+            flash1 = str(restwopointfive)
+            flash2 = str(resonepointfive)
+            final = (f'Your Monthly Rental Income: ${flash1} & Rental Expenses: ${flash2} EXCLUDE DOLLAR SIGNS FROM YOUR ENTRIES ')
+
             print('info received')
+            flash(final, category='success')
+            return redirect(url_for('moincexp'))
         else:
             print('info not received')
 
