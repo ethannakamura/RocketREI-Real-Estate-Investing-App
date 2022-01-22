@@ -1,3 +1,4 @@
+from ctypes import resize
 from flask import Blueprint, render_template, request, flash, redirect, url_for
 
 from app.calculators.forms import initialincomeandexpensesForm, totalincomeandexpensesForm, totalmonthlycashflowForm, requiredinvestmentForm, cashoncashreturnForm
@@ -38,9 +39,9 @@ def incexp():
             calc1.append(resonepointfive)
             calc1.append(restwopointfive)
 
-            flash1 = str(restwopointfive)
-            flash2 = str(resonepointfive)
-            final = (f'Your Monthly Rental Income: ${flash1} & Rental Expenses: ${flash2} EXCLUDE DOLLAR SIGNS FROM YOUR ENTRIES ')
+            flash1 = str(resonepointfive)
+            flash2 = str(restwopointfive)
+            final = (f'Your Monthly Rental Income: ${flash1} & Rental Expenses: ${flash2} --- EXCLUDE DOLLAR SIGNS FROM ALL ENTRIES ')
 
             print('info received')
             flash(final, category='success')
@@ -63,7 +64,14 @@ def moincexp():
             res3 = float(mototalincome) - float(mototalexpenses)
             resthreepointfive = int(res3)
             calc2.append(resthreepointfive)
+
+
+            flash1 = str(resthreepointfive)
+            final = (f'Your Total Monthly Cashflow: ${flash1}')
+
             print('info received')
+            flash(final, category='success')
+            return redirect(url_for('mocashflow'))
 
         else:
             print('info not received')
@@ -85,7 +93,13 @@ def mocashflow():
             resfourpointfive = int(res4) * int(12)
             calc3.append(resfourpointfive)
 
+            flash1 = str(resfourpointfive)
+            final = (f'Your Annual Cashflow: ${flash1} --- COPY THIS NUMBER FOR THE LAST CALCULATION')
+
             print('info received')
+            flash(final, category='success')
+            return redirect(url_for('requiredinvestment'))
+
         else:
             print('info not received')
 
@@ -108,7 +122,12 @@ def requiredinvestment():
 
             calc4.append(resfivepointfive)
 
+            flash1 = str(resfivepointfive)
+            final = (f'Your Required Investment: ${flash1} --- PASTE YOUR ANNUAL CASHFLOW AMOUNT IN THE TOP FORM')
+
             print('info received')
+            flash(final, category='success')
+            return redirect(url_for('cashoncash'))
         else:
             print('info not received')
 
@@ -127,6 +146,7 @@ def cashoncash():
 
             res6 = float(myannualcashflow) / float(mytotalinvestment)
             ressixpointfive = float(res6) * float(100)
+            ressixpointfive = round(ressixpointfive, 2)
             calc5.append(ressixpointfive)
 
             print('info received')
