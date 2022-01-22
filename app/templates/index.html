@@ -101,6 +101,9 @@
                     class="nav-link px-2 text-white">Rocket Dashboard</a>
                 </li>
                 {% if current_user.is_authenticated %}
+                <li class="nav-item" id="ftext"><a href="{{ url_for('auth.profile') }}"
+                    class="nav-link px-2 text-white">My Profile</a>
+                </li>
                 <li class="nav-item" id="ftext"><a href="{{ url_for('auth.logout') }}"
                     class="nav-link px-2 text-white">Logout</a>
                 </li>

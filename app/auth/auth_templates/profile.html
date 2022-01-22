@@ -1,0 +1,22 @@
+{% extends 'components/layout.html' %}
+
+{% block title %}{{ current_user.username }}{% endblock title %}
+
+{% block content %}
+<div class="row">
+    <div class="col">
+        <table>
+            <th>
+                Hi, {{ current_user.username }}.
+            </th>
+            <tr>
+                {{ current_user.__dict__}}
+            </tr>
+        </table>
+    </div>
+
+    <div class="col">
+
+    </div>
+</div>
+{% endblock content %}

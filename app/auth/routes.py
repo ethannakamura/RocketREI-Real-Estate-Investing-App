@@ -73,3 +73,9 @@ def logout():
 @login_required
 def dashboard():
     return render_template('dashboard.html')
+
+@auth.route('/profile')
+@login_required
+def profile():
+
+    return render_template('profile.html')
