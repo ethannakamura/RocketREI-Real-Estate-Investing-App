@@ -32,6 +32,8 @@ migrate = Migrate(app, db)
 login.init_app(app)
 # stops unlogged user from accessing a page and redirects
 login.login_view = 'auth.signin'
+login.login_message = '_LOGIN_REQUIRED_TO_ACCESS_INVESTING_TOOLS'
+login.login_message_category = 'danger'
 
 # allows my whole app's access to comm w/routes
 from . import routes

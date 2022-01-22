@@ -94,22 +94,26 @@
                 <li class="nav-item" id="ftext"><a href="{{ url_for('home') }}" class="nav-link px-2 text-white">Home
                     </a>
                 </li>
-                <li class="nav-item" id="ftext"><a href="{{ url_for('dashboard') }}"
-                        class="nav-link px-2 text-white">Rocket Dashboard</a>
-                </li>
                 <li class="nav-item" id="ftext"><a href="{{ url_for('api.apidata') }}"
                         class="nav-link px-2 text-white">Api</a>
                 </li>
+                <li class="nav-item" id="ftext"><a href="{{ url_for('auth.dashboard') }}"
+                    class="nav-link px-2 text-white">Rocket Dashboard</a>
+                </li>
+                {% if current_user.is_authenticated %}
+                <li class="nav-item" id="ftext"><a href="{{ url_for('auth.logout') }}"
+                    class="nav-link px-2 text-white">Logout</a>
+                </li>
+                {% else %}
                 <li class="nav-item" id="ftext"><a href="{{ url_for('auth.signup') }}"
-                        class="nav-link px-2 text-white">Sign
-                        Up</a>
+                    class="nav-link px-2 text-white">Sign
+                    Up</a>
                 </li>
                 <li class="nav-item" id="ftext"><a href="{{ url_for('auth.signin') }}"
-                        class="nav-link px-2 text-white">Login</a>
+                    class="nav-link px-2 text-white">Login</a>
                 </li>
-                <li class="nav-item" id="ftext"><a href="{{ url_for('auth.logout') }}"
-                        class="nav-link px-2 text-white">Logout</a>
-                </li>
+                {% endif %}
+                
             </ul>
             <p class="container justify-content-center col-lg-10 fs-4 px-2 text-warning" id="ptext">Created by <a
                     href="https://www.linkedin.com/in/ethannakamura/" class="text-warning">@ethannakamura</a>

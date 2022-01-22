@@ -21,19 +21,22 @@
         <img src="../static/images/Bizlogo.png" id="logo">
     </div>
     <br>
-    <div class = "row">
-        {% with messages = get_flashed_messages(with_categories=True) %}
-            {% if messages %}
-                {% for category, message in messages %}
-                <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
-                    {{ message }}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
+    <div class="container-fluid">
+        <div class = "row">
+            <div class= "col-6 text-center mx-auto">
+            {% with messages = get_flashed_messages(with_categories=True) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible bg-light text-black font-weight-bolder" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            </div>
         </div>
     </div>
     <br>
@@ -50,7 +53,7 @@
                     <a class="nav-link" id="navhome" href="{{ url_for('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="navdash" id="navtext" href="{{ url_for('dashboard') }}">Rocket Dashboard</a>
+                    <a class="nav-link" id="navdash" id="navtext" href="{{ url_for('auth.dashboard') }}">Rocket Dashboard</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="navapi" href="{{ url_for('api.apidata') }}">API</a>
@@ -60,9 +63,12 @@
                         <a class="nav-link dropdown-toggle"  id="navinvest" href="http://example.com" id="dropdown01"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Investonauts</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item text-center text-black" id="droptext1" href="{{ url_for('auth.signup') }}">Sign Up</a>
-                            <a class="dropdown-item text-center text-black" id="droptext2" href="{{ url_for('auth.signin') }}">Login</a>
-                            <a class="dropdown-item text-center text-black" id="droptext3" href="{{ url_for('auth.logout') }}">Logout</a>
+                            {% if current_user.is_authenticated %}
+                                <a class="dropdown-item text-center text-black" id="droptext3" href="{{ url_for('auth.logout') }}">Logout</a>
+                            {% else %}
+                                <a class="dropdown-item text-center text-black" id="droptext1" href="{{ url_for('auth.signup') }}">Sign Up</a>
+                                <a class="dropdown-item text-center text-black" id="droptext2" href="{{ url_for('auth.signin') }}">Login</a>
+                            {% endif %} 
                         </div>
                 </div>
                 </li>
