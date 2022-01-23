@@ -1,4 +1,3 @@
-from ctypes import resize
 from flask import Blueprint, render_template, request, flash, redirect, url_for
 
 from app.calculators.forms import initialincomeandexpensesForm, totalincomeandexpensesForm, totalmonthlycashflowForm, requiredinvestmentForm, cashoncashreturnForm
@@ -41,7 +40,7 @@ def incexp():
 
             flash1 = str(resonepointfive)
             flash2 = str(restwopointfive)
-            final = (f'Your Monthly Rental Income: ${flash1} & Rental Expenses: ${flash2} --- EXCLUDE DOLLAR SIGNS FROM ALL ENTRIES ')
+            final = (f'Your Monthly Rental Income: ${flash1} & Rental Expenses: ${flash2} \r\n EXCLUDE DOLLAR SIGNS FROM ALL ENTRIES ')
 
             print('info received')
             flash(final, category='success')
@@ -94,7 +93,7 @@ def mocashflow():
             calc3.append(resfourpointfive)
 
             flash1 = str(resfourpointfive)
-            final = (f'Your Annual Cashflow: ${flash1} --- COPY THIS NUMBER FOR THE LAST CALCULATION')
+            final = (f'Your Annual Cashflow: ${flash1}')
 
             print('info received')
             flash(final, category='success')
@@ -156,6 +155,7 @@ def cashoncash():
             calc5.append(ressixpointfive)
 
             print('info received')
+            flash("An ideal Cash on Cash Return is anything higher than or in between 8-12%, if your result is in this range IT'S A DEAL!", category='success')
         else:
             print('info not received')
 

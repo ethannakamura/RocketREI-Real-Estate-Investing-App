@@ -13,11 +13,13 @@ from flask_migrate import Migrate
 
 from .calculators.routes import calculators
 
+#function is for dash and flask communication
 # create instance of my flask obj (creation of flask app)
+# create core Flask app with embedded Dash app
 app = Flask(__name__)
-
-# configs my flask app based on config class
 app.config.from_object(Config)
+# configs my flask app based on config class
+# conigs my dash app onto my parent flask app
 
 # register my bp's - creates comms
 app.register_blueprint(api)
