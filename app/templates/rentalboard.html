@@ -12,9 +12,12 @@
     <header ul class="nav col-12 col-md-auto mb-2 justify-content-center">
         <li><a href="{{ url_for('auth.dashboard') }}" class="nav-link px-2 text-warning" id="reitext">Return to My Dashboard</a></li>
         <li><a href="{{ url_for('incexp') }}" class="nav-link px-2 text-warning" id="reitext">©ROCKETREI Rental Investment Calculator</a></li>
-        <li><a href="{{ url_for('/dash/') }}" class="nav-link px-2 text-warning" id="reitext">Dash</a></li>
     </header>
 </div>
 <br>
+
+<div id=”chart”>
+    <iframe src="http://127.0.0.1:5000/dash/" width=1100 height=400 frameBorder="0"></iframe>
+</div>
 
 {% endblock content %}

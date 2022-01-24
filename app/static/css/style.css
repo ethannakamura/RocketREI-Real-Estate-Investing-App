@@ -108,3 +108,7 @@ fieldset{
     width:350px;
     margin:auto;
 }
+.carousel{
+    border-style: ridge;
+    color:white;
+}

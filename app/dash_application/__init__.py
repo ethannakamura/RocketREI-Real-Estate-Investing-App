@@ -4,6 +4,11 @@ from dash import html
 from flask import app
 import plotly.express as px
 import pandas as pd
+from urllib.request import urlopen
+import json
+
+
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__)
 
@@ -16,6 +21,7 @@ df = pd.DataFrame({
 })
 
 def create_dash_application(flask_app):
+    
     dash_app = dash.Dash(server=flask_app, name="Dashboard", url_base_pathname='/dash/')
 
     dash_app.layout = html.Div(
@@ -32,7 +38,6 @@ def create_dash_application(flask_app):
         )]
     )
     return dash_app
-
 
 if __name__ == '__main__':
     app.run_server(debug=True)
