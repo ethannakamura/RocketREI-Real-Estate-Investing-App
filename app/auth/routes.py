@@ -3,7 +3,7 @@ from app.forms import signupForm, signinForm, updateUsernameForm, updateUsername
 
 # imports for working with our User model and signing users up and logins
 from app.models import  db, User
-from flask_login import login_user, logout_user, current_user, login_required, user_accessed
+from flask_login import login_user, logout_user, current_user, login_required
 from werkzeug.security import check_password_hash
 
 auth = Blueprint('auth',__name__, template_folder='auth_templates', url_prefix='/auth')

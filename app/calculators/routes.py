@@ -1,5 +1,4 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
-
 from app.calculators.forms import initialincomeandexpensesForm, totalincomeandexpensesForm, totalmonthlycashflowForm, requiredinvestmentForm, cashoncashreturnForm
 
 from flask import render_template

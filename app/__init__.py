@@ -1,44 +1,34 @@
-#__init__.py estabs comms between our apps and svcs
 from flask import Flask
 from config import Config
-
-# my blueprints
-from .api.routes import api
-from .auth.routes import auth
-
-# my db info (instance of db obj)
-# import db login mngr from my models file
-from .models import db, login
 from flask_migrate import Migrate
+from . models import login
+from . models import db 
+from .dash_application import create_dash_application
 
-from .calculators.routes import calculators
+migrate = Migrate()
 
-#function is for dash and flask communication
-# create instance of my flask obj (creation of flask app)
-# create core Flask app with embedded Dash app
-app = Flask(__name__)
-app.config.from_object(Config)
-# configs my flask app based on config class
-# conigs my dash app onto my parent flask app
+def create_app(config_class=Config):
+    app = Flask(__name__, static_url_path='/static')
+    app.config.from_object(config_class)
 
-# register my bp's - creates comms
-app.register_blueprint(api)
-app.register_blueprint(auth)
-app.register_blueprint(calculators)
+    db.init_app(app)
+    migrate.init_app(app, db)
+    login.init_app(app,db)
+    login.login_view = 'auth.signin'
+    login.login_message = '_LOGIN_REQUIRED_TO_ACCESS_INVESTING_TOOLS'
+    login.login_message_category = 'danger'
 
-# creates my ORM and Migrate comms
-db.init_app(app)
-migrate = Migrate(app, db)
+    create_dash_application(app)
+    
+    from .auth.routes import auth
+    from .calculators.routes import calculators
 
-# configs my login mngr
-login.init_app(app)
-# stops unlogged user from accessing a page and redirects
-login.login_view = 'auth.signin'
-login.login_message = '_LOGIN_REQUIRED_TO_ACCESS_INVESTING_TOOLS'
-login.login_message_category = 'danger'
+    app.register_blueprint(auth)
+    app.register_blueprint(calculators)
 
-# allows my whole app's access to comm w/routes
-from . import routes
+    with app.app_context():
+        from . import routes
 
-# let app/flask obj access my db models
-from . import models
+    from . import models
+
+    return app
