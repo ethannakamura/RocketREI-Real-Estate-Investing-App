@@ -4,11 +4,6 @@ from dash import html
 from flask import app
 import plotly.express as px
 import pandas as pd
-from urllib.request import urlopen
-import json
-
-
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__)
 

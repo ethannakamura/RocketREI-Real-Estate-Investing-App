@@ -86,7 +86,8 @@ body{
     justify-content: center;
 }
 #reitext{
-    font-size: 18px;
+    font-size: 20px;
+    color:white;
 }
 .use{
     width:300px;
@@ -111,4 +112,9 @@ fieldset{
 .carousel{
     border-style: ridge;
     color:white;
+}
+.renttext{
+    color:rgba(255, 255, 255, 0.776);
+    font-weight: bolder;
+    font-size:18px;
 }

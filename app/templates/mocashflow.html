@@ -22,6 +22,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <fieldset id="totalincome-field">
+                    <h6 class="renttext">Your total monthly profit after subtracting all rental expenses from your rental income</h6>
                     {{ form3.totalmonthlycashflow(class="form-control text-center", placeholder="Enter Your Total Monthly Cashflow") }}
                 </fieldset>
                 <br>
@@ -32,7 +33,7 @@
             <div class="col-lg-6">
                 <fieldset>
                 {%if form3%}
-                <p class="font-weight-bold font-size:25px text-center" id="results">Annual Cashflow: ${{calc3[0]}}</p>
+                <p class="font-weight-bold font-size:25px text-center" id="results">Calculates Annual Cashflow {{calc3[0]}}</p>
                 {%endif%}
                 <br>
                 </fieldset>

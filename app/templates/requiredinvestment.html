@@ -33,21 +33,22 @@
             <div class="col-lg-12"> 
                 <fieldset> 
                     {%if form4%}
-                    <p class="font-weight-bold font-size:25px text-center" id="results">Your Annual Cashflow: ${{calc4[0]}}</p>
+                    <p class="font-weight-bold font-size:25px text-center" id="results">Calculates Annual Cashflow {{calc4[0]}}</p>
                     {%endif%}
-                    <br>
                 </fieldsset>
-                <br>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12">
                 <fieldset id="totalincome-field">
+                    <h6 class="renttext">A required percentage of up front money owed to your financial lender upon closing on your approved home loan</h6>
                     {{ form4.downpayment(class="form-control text-center", placeholder="Enter Your Down Payment") }}
                 </fieldset>
                 <br>
-                <img src="../static/images/statement8.png">
+
                 <fieldset  id="totalexpenses-field">
+                    <h6 class="renttext">Real esate transaction fees incurred by the seller and buyer during a transaction. You will pay 1-2% of your homes purchase price,
+                        if unsure you may calculate using 1.5%</h6>
                     {{ form4.closingcosts(class="form-control text-center", placeholder="Enter Your Closing Costs") }}
                 </fieldset>
                 <br>
@@ -55,14 +56,15 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <img src="../static/images/statement9.png">
                 <fieldset id="totalincome-field">
+                    <h6 class="renttext">The total amount of capital required to fix up a property to meet current market standards, create suitable living conditions for
+                        for future tenants, and to maximize the return on investment</h6>
                     {{ form4.rehabbudget(class="form-control text-center", placeholder="Enter Your Rehab Budget") }}
                 </fieldset>
                 <br>
 
-                <img src="../static/images/statement10.png">
                 <fieldset  id="totalexpenses-field">
+                    <h6 class="renttext">Additional capital, above the estimate rehab budget, that can be used if unforeseen repairs are required</h6>
                     {{ form4.contingencyfund(class="form-control text-center", placeholder="Enter Your Contingency Fund") }}
                 </fieldset>
                 <br>
@@ -71,8 +73,9 @@
         <div class="row" id="ressubmit">
             <div class="col-lg-6">
                 <fieldset> 
+                <h6 class="renttext">The minimum capital required to own this property as an investment</h6>
                 {%if form4%}
-                <p class="font-weight-bold font-size:25px text-center" id="results">Your Required Investment: ${{calc4[1]}}</p>
+                <p class="font-weight-bold font-size:25px text-center" id="results">Calculates Your Required Investment {{calc4[1]}}</p>
                 {%endif%}
                 <br>
                 </fieldsset>

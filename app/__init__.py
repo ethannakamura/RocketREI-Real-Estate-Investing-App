@@ -3,7 +3,7 @@ from config import Config
 from flask_migrate import Migrate
 from . models import login
 from . models import db 
-from .dash_application import create_dash_application
+#from .dash_application import fairmarketrent
 
 migrate = Migrate()
 
@@ -17,8 +17,6 @@ def create_app(config_class=Config):
     login.login_view = 'auth.signin'
     login.login_message = '_LOGIN_REQUIRED_TO_ACCESS_INVESTING_TOOLS'
     login.login_message_category = 'danger'
-
-    create_dash_application(app)
     
     from .auth.routes import auth
     from .calculators.routes import calculators

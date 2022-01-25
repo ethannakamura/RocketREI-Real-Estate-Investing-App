@@ -23,15 +23,15 @@
     <div class="container" id="placeinfo">
         <div class="row">
             <div class="col-md-12">
-                <img src="../static/images/statement1.png">
                 <br>
                 <fieldset id="rentalincome-field">
+                <h6 class="renttext">Any current or projected payment that you receive for the use or occupation of your property</h6>
                     {{ form1.rentalincome(class="form-control text-center", placeholder="Enter Monthly Rental Income") }}
                 </fieldset>
 
                 <br>
-                <img src="../static/images/statement2.png">
                 <fieldset id="miscsvcincome-field">
+                <h6 class="renttext">Any additional income you receive from your tenant for services that you provide them</h6>
                     {{ form1.miscsvcincome(class="form-control text-center", placeholder="Enter Other Rental Income") }}
                 </fieldset>
                 <br>
@@ -42,7 +42,7 @@
             <div class="col-lg-6">
                 <fieldset>
                 {%if form1%}
-                <p class="font-weight-bold font-size:25px" id="results">Monthy Rental Income: ${{calc1[0]}}</p>
+                <p class="font-weight-bold font-size:25px" id="results">Calculates Monthy Rental Income {{calc1[0]}}</p>
                 {%endif%}
                 <br>
                 </fieldset>
@@ -51,28 +51,32 @@
         <div class="container" id="placeinfo">
             <div class="row">
                 <div class="col-md-12">
-                    <img src="../static/images/statement3.png">
                     <fieldset id="proptax-field">
+                    <h6 class="renttext">Taxes paid to your local government's office based on your property's value and location</h6>
                         {{ form1.proptax(class="form-control text-center", placeholder="Enter Monthly Property Tax") }}
                     </fieldset>
                     <br>
-
+                
                     <fieldset id="insurance-field">
+                    <h6 class="renttext">Homeowners insurance that covers losses or damages to the property or assets in the home</h6>
                         {{ form1.insurance(class="form-control text-center", placeholder="Enter Monthly Insurance Cost") }}
                     </fieldset>
                     <br>
-
+                    
                     <fieldset id="watersewer-field">
+                    <h6 class="renttext">Water consumption charges or for having a sewer system in place</h6>
                         {{ form1.watersewer(class="form-control text-center", placeholder="Enter Monthly Water/Sewer Cost") }}
                     </fieldset>
                     <br>
-
+                    
                     <fieldset id="garbage-field">
+                    <h6 class="renttext">Waste management removal services provided by an outside company</h6>
                         {{ form1.garbage(class="form-control text-center", placeholder="Enter Monthly Garbage Cost") }}
                     </fieldset>
                     <br>
-
+                    
                     <fieldset id="electricity-field">
+                    <h6 class="renttext">Monthly electric company invoice for owed electricity energy at your property</h6>
                         {{ form1.electricity(class="form-control text-center", placeholder="Enter Monthly Electricity Cost") }}
                     </fieldset>
                     <br>
@@ -83,45 +87,49 @@
         <div class="row">
             <div class="col-md-12">
                 <fieldset id="gas-field">
+                <h6 class="renttext">May be lumped with your electiricity invoice, if not please fill out below</h6>
                     {{ form1.gas(class="form-control text-center", placeholder="Enter Monthly Gas Cost") }}
                 </fieldset>
                 <br>
 
-                <img src="../static/images/statement4.png">
                 <fieldset id="hoafees-field">
+                <h6 class="renttext">Dues paid to a Homeowners Association (HOA) for property owners/tenants living in an HOA community</h6>
                     {{ form1.hoafees(class="form-control text-center", placeholder="Enter Monthly HOA Fees") }}
                 </fieldset>
                 <br>
-
+                
                 <fieldset id="lawn-field">
+                <h6 class="renttext">Cost of seasonal lawncare if this is not maintained by a tenant</h6>
                     {{ form1.lawn(class="form-control text-center", placeholder="Enter Monthly Lawn Maintenance Cost") }}
                 </fieldset>
                 <br>
 
-                <img src="../static/images/statement5.png">
                 <fieldset id="vacancy-field">
+                <h6 class="renttext">Save 3-10% of gross monthly rent, vacancies are properties without a tenant, research vacancies in your investment area</h6>
                     {{ form1.vacancy(class="form-control text-center", placeholder="Enter Monthly Vacancy Savings") }}
                 </fieldset>
                 <br>
                 
-                <img src="../static/images/statement6.png">
                 <fieldset id="repairs-field">
+                <h6 class="renttext">Save 5-15% of your gross monthly rent as this is the average cost of most general tenant-inquiries for repairs</h6>
                     {{ form1.repairs(class="form-control text-center", placeholder="Enter Monthly Repair Savings") }}
                 </fieldset>
                 <br>
                 
-                <img src="../static/images/statement7.png">
                 <fieldset id="capex-field">
+                <h6 class="renttext">Save 5-15% of your gross monthly rent for capital expenditures, these are less than frequent property imporovements (roof, plumbing, etc.)</h6>
                     {{ form1.capex(class="form-control text-center", placeholder="Enter Monthly Capex Savings") }}
                 </fieldset>
                 <br>
 
                 <fieldset id="propmgmt-field">
+                <h6 class="renttext">Fees owed to your property manager, if applicalbe, for managing your property and immediate tenant concerns</h6>
                     {{ form1.propmgmt(class="form-control text-center", placeholder="Enter Monthly Property Management Cost") }}
                 </fieldset>
                 <br>
 
                 <fieldset id="mortgage-field">
+                <h6 class="renttext">Payment owed to your financial institution for assisting you in financing your residential home purchase</h6>
                     {{ form1.mortgage(class="form-control text-center", placeholder="Enter Monthly Property Mortgage Cost") }}
                 </fieldset>
                 <br>
@@ -133,7 +141,7 @@
             <div class="rentalforms col-lg-6">
                 <fieldset>
                 {%if form1%}
-                <p class="font-weight-bold font-size:25px" id="results">Montlhy Rental Expenses: ${{calc1[1]}}</p>
+                <p class="font-weight-bold font-size:25px" id="results">Calculates Montlhy Rental Expenses {{calc1[1]}}</p>
                 {%endif%}
                 <br>
                 </fieldset>
