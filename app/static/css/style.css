@@ -148,3 +148,11 @@ padding-left: 50px;
     width:900px;
     height:350px;
 }
+.indextext{
+    color:rgba(254, 119, 0, 0.845);
+    font-weight: bolder;
+    font-size:28px;
+}
+.linkedin{
+    color:rgba(254, 119, 0, 0.845);
+}
