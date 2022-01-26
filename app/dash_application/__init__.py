@@ -15,7 +15,7 @@ app = dash.Dash(__name__)
 fmrdata = pd.read_csv('Fair_Market_Rents.csv')
 
 fmrfig = px.scatter(fmrdata, x="County", y="One Bed Price", color="State", height=1000,
-title="One Bedroom Fair Market Rent Prices By County and State")
+title="One Bedroom Properties' Fair Market Rent Prices By County and State")
 
 fmrfig.update_layout = margin=dict(l=0, r=0, t=0, b=0)
 
@@ -48,7 +48,7 @@ def resize_figure(width, fig_json):
 fmrdata2 = pd.read_csv('Fair_Market_Rents.csv')
 
 fmrfig2 = px.scatter(fmrdata, x="County", y="Two Bed Price", color="State", height=1000,
-title="Two Bedroom Fair Market Rent Prices By County and State")
+title="Two Bedroom Properties' Fair Market Rent Prices By County and State")
 
 fmrfig2.update_layout = margin=dict(l=0, r=0, t=0, b=0)
 
@@ -81,7 +81,7 @@ def resize_figure(width, fig_json):
 fmrdata3 = pd.read_csv('Fair_Market_Rents.csv')
 
 fmrfig3 = px.scatter(fmrdata, x="County", y="Three Bed Price", color="State", height=1000,
-title="Three Bedroom Fair Market Rent Prices By County and State")
+title="Three Bedroom Properties' Fair Market Rent Prices By County and State")
 
 fmrfig3.update_layout = margin=dict(l=0, r=0, t=0, b=0)
 
@@ -114,7 +114,7 @@ def resize_figure(width, fig_json):
 fmrdata4 = pd.read_csv('Fair_Market_Rents.csv')
 
 fmrfig4 = px.scatter(fmrdata, x="County", y="Four Bed Price", color="State", height=1000,
-title="Four Bedroom Fair Market Rent Prices By County and State")
+title="Four Bedroom Properties' Fair Market Rent Prices By County and State")
 
 fmrfig4.update_layout = margin=dict(l=0, r=0, t=0, b=0)
 
