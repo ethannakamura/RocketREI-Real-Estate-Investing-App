@@ -50,7 +50,34 @@
         <th scope="row">What market do you want to invest in?</th>
       </tr>
       <tr>
-        <th scope="row">How will you be calculating your investment deals?</th>
+        <th scope="row">How will you be calculating your rental investment deals?</th>
+      </tr>
+      <tr>
+        <th scope="row">What condition of properties will you be willing to buy to rehab?
+          (light, medium, heavy, Fire damange)
+        </th>
+      </tr>
+      <tr>
+        <th scope="row">Do you have at least 3 general contractors? (Are they licesned &
+          insured)
+        </th>
+      </tr>
+      <tr>
+        <th scope="row">Do you have relaibles subcontractors (electrical, plubming, floor,
+          paint, roof, windows, kitchen, bathrooms, landscaping)
+        </th>
+      </tr>
+      <tr>
+        <th scope="row">How much money do you want to make this quarter and the next?
+        </th>
+      </tr>
+      <tr>
+        <th scope="row">Do you have contracts for your future tenants to sign?
+        </th>
+      </tr>
+      <tr>
+        <th scope="row">Do you have a property manager?
+        </th>
       </tr>
       <tr>
         <th scope="row">How will you get deals? (Cold Calling, Wholesalers, Door Knock, MLS, Realtors, Networking)</th>
@@ -85,5 +112,26 @@
 
 <br>
 
+<div class="container">
+  <div class="row">
+      <div class="col-lg-12">
+          <img src="../static/images/white.png">
+      </div>
+  </div>
+
+  <footer class="">
+      <ul class="nav justify-content-center">
+          <li class="nav-item" id="ftext"><a href="{{ url_for('rentalboard') }}"
+                  class="nav-link px-2 text-light">Rental Dashboard</a>
+          </li>
+          <li class="nav-item" id="ftext"><a href="{{ url_for('auth.profile') }}"
+                  class="nav-link px-2 text-light">My Profile</a>
+          </li>
+      </ul>
+      <p class="container justify-content-center col-lg-10 fs-4 px-2" id="reitext">Created by <a
+              href="https://www.linkedin.com/in/ethannakamura/" id="reitext">@ethannakamura</a>
+  </footer>
+
+</div>
 
 {% endblock content %}
