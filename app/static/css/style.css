@@ -122,6 +122,16 @@ fieldset{
     height:50px;
 }
 .plot{
-    width:1300px;
-    height:500px;
+    width:900px;
+    height:350px;
+}
+.calcleft{
+padding-right: 50px;
+}
+.calcright{
+padding-left: 50px;
+}
+.imgcalc{
+    width:445px;
+    height:300px;
 }
