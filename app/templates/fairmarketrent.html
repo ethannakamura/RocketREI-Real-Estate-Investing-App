@@ -1,0 +1,43 @@
+{% extends 'components/layout.html' %}
+
+{% block title %}Fair Market Rent Analysis{% endblock title %}
+
+{% block content %}
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+    <div class="container px-4 py-5 text-light" id="icon-grid">
+        <img src="../static/images/FMR Section.png">
+    </div>
+
+
+    <div class="container">
+        <header ul class="nav col-12 col-md-auto justify-content-center">
+            <li><a href="{{ url_for('auth.dashboard') }}" class="nav-link px-2 text-warning" id="reitext">Rocket Dashboard</a></li>
+            <li><a href="{{ url_for('rentalboard') }}" class="nav-link px-2 text-warning" id="reitext">Rental Dashboard</a></li>
+
+            </ul>
+        </header>
+    </div>
+
+
+    <div id=”chart”>
+        <iframe src="http://127.0.0.1:5000/fmr/" width=1100 height=400 frameBorder="0"></iframe>
+    </div>
+    <br>
+    <div id=”chart”>
+        <iframe src="http://127.0.0.1:5000/fmr2/" width=1100 height=400 frameBorder="0"></iframe>
+    </div>
+    <br>
+    <div id=”chart”>
+        <iframe src="http://127.0.0.1:5000/fmr3/" width=1100 height=400 frameBorder="0"></iframe>
+    </div>
+    <br>
+    <div id=”chart”>
+        <iframe src="http://127.0.0.1:5000/fmr4/" width=1100 height=400 frameBorder="0"></iframe>
+    </div>
+    <br class="py-5">
+
+</div>
+
+{% endblock content %}

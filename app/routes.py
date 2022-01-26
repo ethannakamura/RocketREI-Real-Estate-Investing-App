@@ -50,6 +50,12 @@ def requiredinvestment():
 def cashoncash():
     return render_template('cashoncash.html')
 
+@app.route('/FairMarketRent')
+@login_required
+def fairmarketrent():
+    return render_template('fairmarketrent.html')
+
+
 @app.route('/Loggedout')
 def Goodbye():
     return render_template('logout.html')

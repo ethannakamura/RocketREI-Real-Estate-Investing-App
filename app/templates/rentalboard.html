@@ -10,14 +10,12 @@
 
 <div class="container">
     <header ul class="nav col-12 col-md-auto mb-2 justify-content-center">
-        <li><a href="{{ url_for('auth.dashboard') }}" class="nav-link px-2 text-warning" id="reitext">Return to My Dashboard</a></li>
-        <li><a href="{{ url_for('incexp') }}" class="nav-link px-2 text-warning" id="reitext">©ROCKETREI Rental Investment Calculator</a></li>
+        <li><a href="{{ url_for('auth.dashboard') }}" class="nav-link px-2 text-warning" id="reitext">Rocket</a></li>
+        <li><a href="{{ url_for('fairmarketrent') }}" class="nav-link px-2 text-warning" id="reitext">Fair Market Rent Data</a></li>
+        <li><a href="{{ url_for('incexp') }}" class="nav-link px-2 text-warning" id="reitext">Rental Investment Calculator</a></li>
     </header>
 </div>
 <br>
-<div class="container px-4 py-5 text-light" id="icon-grid">
-    <img src="../static/images/guide.png">
-</div>
 
 <div class="row">
     <div class="col-lg-12">
@@ -28,26 +26,5 @@
 </div>
 
 <br>
-
-<div class="container px-4 py-5 text-light" id="icon-grid">
-    <img src="../static/images/FMR Section.png">
-</div>
-
-<div id=”chart”>
-    <iframe src="http://127.0.0.1:5000/fmr/" width=1100 height=400 frameBorder="0"></iframe>
-</div>
-<br>
-<div id=”chart”>
-    <iframe src="http://127.0.0.1:5000/fmr2/" width=1100 height=400 frameBorder="0"></iframe>
-</div>
-<br>
-<div id=”chart”>
-    <iframe src="http://127.0.0.1:5000/fmr3/" width=1100 height=400 frameBorder="0"></iframe>
-</div>
-<br>
-<div id=”chart”>
-    <iframe src="http://127.0.0.1:5000/fmr4/" width=1100 height=400 frameBorder="0"></iframe>
-</div>
-<br class="py-5">
 
 {% endblock content %}

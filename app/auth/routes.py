@@ -25,7 +25,7 @@ def signin():
             # there's an implied else here - the username & pass matched a user in our db
             login_user(user)
             print(current_user, current_user.__dict__)
-            flash(f'_LOGIN_SUCCESSFUL', category='success')
+            flash(f'_LOGIN_SUCCESSFUL_WELCOME_TO_YOUR_DASHBOARD!', category='success')
             return redirect(url_for('auth.dashboard'))
 
         else:
