@@ -13,9 +13,7 @@
 
     <div class="container">
         <header ul class="nav col-12 col-md-auto justify-content-center">
-            <li><a href="{{ url_for('auth.dashboard') }}" class="nav-link px-2 text-light" id="reitext">Rocket Dashboard</a></li>
-            <li><a href="{{ url_for('rentalboard') }}" class="nav-link px-2 text-light" id="reitext">Rental Dashboard</a></li>
-
+            <li><a href="{{ url_for('auth.rentalboard') }}" class="nav-link px-2 text-light" id="reitext">Rental Dashboard</a></li>
             </ul>
         </header>
     </div>
@@ -49,10 +47,7 @@
 
     <footer class="">
         <ul class="nav justify-content-center">
-            <li class="nav-item" id="ftext"><a href="{{ url_for('auth.dashboard') }}"
-                    class="nav-link px-2 text-light">Rocket Dashboard</a>
-            </li>
-            <li class="nav-item" id="ftext"><a href="{{ url_for('rentalboard') }}"
+            <li class="nav-item" id="ftext"><a href="{{ url_for('auth.rentalboard') }}"
                 class="nav-link px-2 text-light">Rental Dashboard</a>
             </li>
             <li class="nav-item" id="ftext"><a href="{{ url_for('incexp') }}"

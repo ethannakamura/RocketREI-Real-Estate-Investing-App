@@ -26,7 +26,7 @@ def signin():
             login_user(user)
             print(current_user, current_user.__dict__)
             flash(f'_LOGIN_SUCCESSFUL_WELCOME_TO_YOUR_DASHBOARD!', category='success')
-            return redirect(url_for('auth.dashboard'))
+            return redirect(url_for('rentalboard'))
 
         else:
             flash('_INCORRECT_USERNAME_OR_PASSWORD_PLEASE_TRY_AGAIN', category='danger')
@@ -68,10 +68,10 @@ def logout():
     flash('_COME_BACK_SOON!', category='success')
     return redirect(url_for('Goodbye'))
 
-@auth.route('/MyDashboard')
+@auth.route('/MyRentalBoard')
 @login_required
-def dashboard():
-    return render_template('dashboard.html')
+def rentalboard():
+    return render_template('rentalboard.html')
 
 @auth.route('/profile', methods=['GET', 'POST'])
 @login_required
