@@ -36,7 +36,37 @@
     <div id=”chart”>
         <iframe src="http://127.0.0.1:5000/fmr4/" width=1100 height=400 frameBorder="0"></iframe>
     </div>
-    <br class="py-5">
+</div>
+
+<br class="py-5">
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <img src="../static/images/white.png">
+        </div>
+    </div>
+
+    <footer class="">
+        <ul class="nav justify-content-center">
+            <li class="nav-item" id="ftext"><a href="{{ url_for('auth.dashboard') }}"
+                    class="nav-link px-2 text-white">Rocket Dashboard</a>
+            </li>
+            <li class="nav-item" id="ftext"><a href="{{ url_for('rentalboard') }}"
+                class="nav-link px-2 text-white">Rental Dashboard</a>
+            </li>
+            <li class="nav-item" id="ftext"><a href="{{ url_for('incexp') }}"
+                class="nav-link px-2 text-white">Rental Property
+                Calculator</a>
+            </li>
+            <li class="nav-item" id="ftext"><a href="{{ url_for('auth.profile') }}"
+                    class="nav-link px-2 text-white">My Profile</a>
+            </li>
+           
+        </ul>
+        <p class="container justify-content-center col-lg-10 fs-4 px-2 text-warning" id="ptext">Created by <a
+                href="https://www.linkedin.com/in/ethannakamura/" class="text-warning">@ethannakamura</a>
+    </footer>
 
 </div>
 

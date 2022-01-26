@@ -79,6 +79,15 @@ body{
     color:rgb(255, 255, 255);
     justify-content: center;
 }
+#textinfo{
+    font-size:25px;
+    background-color: rgba(223, 104, 0, 0.879);
+    border-width: 5px;
+    border-style: ridge;
+    color:rgb(255, 255, 255);
+    justify-content: center;
+    border-color: white;
+}
 
 .loginforms{
     width:480px;
@@ -132,6 +141,10 @@ padding-right: 50px;
 padding-left: 50px;
 }
 .imgcalc{
-    width:445px;
+    width:480px;
     height:300px;
+}
+#plots{
+    width:900px;
+    height:350px;
 }
