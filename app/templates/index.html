@@ -16,7 +16,7 @@
     <br>
 
     <div class="yes btn btn-light btn-lg fw-bold">
-        <a class="text-white text-center" id="arrows" href="{{ url_for('auth.signup') }}" button type="button">
+        <a class="text-light text-center" id="arrows" href="{{ url_for('auth.signup') }}" button type="button">
             <strong>I WANT TO BECOME</strong><br><strong>AN INVESTONAUT!</strong></a>
     </div>
     <br>
@@ -98,28 +98,28 @@
                     </a>
                 </li>
                 <li class="nav-item" id="ftext"><a href="{{ url_for('auth.dashboard') }}"
-                        class="nav-link px-2 text-white">Rocket Dashboard</a>
+                        class="nav-link px-2 text-light">Rocket Dashboard</a>
                 </li>
                 {% if current_user.is_authenticated %}
                 <li class="nav-item" id="ftext"><a href="{{ url_for('auth.profile') }}"
-                        class="nav-link px-2 text-white">My Profile</a>
+                        class="nav-link px-2 text-light">My Profile</a>
                 </li>
                 <li class="nav-item" id="ftext"><a href="{{ url_for('auth.logout') }}"
-                        class="nav-link px-2 text-white">Logout</a>
+                        class="nav-link px-2 text-light">Logout</a>
                 </li>
                 {% else %}
                 <li class="nav-item" id="ftext"><a href="{{ url_for('auth.signup') }}"
-                        class="nav-link px-2 text-white">Sign
+                        class="nav-link px-2 text-light">Sign
                         Up</a>
                 </li>
                 <li class="nav-item" id="ftext"><a href="{{ url_for('auth.signin') }}"
-                        class="nav-link px-2 text-white">Login</a>
+                        class="nav-link px-2 text-light">Login</a>
                 </li>
                 {% endif %}
 
             </ul>
-            <p class="linkedin container justify-content-center col-lg-10 fs-4 px-2" id="ptext">Created by <a
-                    href="https://www.linkedin.com/in/ethannakamura/" class="linkedin">@ethannakamura</a>
+            <p class="linkedin container justify-content-center col-lg-10 fs-4 px-2" id="reitext">Created by <a
+                    href="https://www.linkedin.com/in/ethannakamura/" id="reitext">@ethannakamura</a>
         </footer>
     </div>
 

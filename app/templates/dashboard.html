@@ -11,9 +11,40 @@
 
     <div class="container">
         <header ul class="nav col-12 col-md-auto justify-content-center">
-                <li><a href="{{ url_for('rentalboard') }}" class="nav-link px-2 text-warning" id="reitext">Rental Dashboard</a></li>
+                <li><a href="{{ url_for('rentalboard') }}" class="nav-link px-2 text-light" id="reitext">Rental Dashboard</a></li>
             </ul>
         </header>
     </div>
     
+
+    <table class="table table-hover table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+
     {% endblock content %}
