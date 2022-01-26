@@ -80,7 +80,7 @@ body{
     justify-content: center;
 }
 #textinfo{
-    font-size:25px;
+    font-size:20px;
     background-color: rgba(223, 104, 0, 0.879);
     border-width: 5px;
     border-style: ridge;
@@ -154,3 +154,11 @@ padding-left: 50px;
     font-size:28px;
 }
 
+#tabletext{
+    text-align: center;
+}
+.blueprint{
+    color:rgba(255, 255, 255, 0.845);
+    font-weight: bolder;
+    font-size:20px;
+}

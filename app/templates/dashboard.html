@@ -5,46 +5,85 @@
 {% block content %}
 
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <div class="container py-5 text-light" id="icon-grid">
-        <img src="../static/images/rocketdash.png">
+  <div class="container py-5 text-light" id="icon-grid">
+    <img src="../static/images/rocketdash.png">
+  </div>
+
+  <div class="container">
+    <header ul class="nav col-12 col-md-auto justify-content-center">
+      <li><a href="{{ url_for('rentalboard') }}" class="nav-link px-2 text-light" id="reitext">Rental Dashboard</a></li>
+      </ul>
+    </header>
+  </div>
+</div>
+
+<br>
+<fieldset>
+<div class="row">
+    <div class="col-lg-12" id="">
+        <h6 class="blueprint">Click the link to access your Rental Dashboard, otherwise 
+          use our Business Plan Blueprint as a guide for you to prepare your real estate
+          investment journey!
+        </h6>
     </div>
+</div>
+</fieldset>
+<br>
 
-    <div class="container">
-        <header ul class="nav col-12 col-md-auto justify-content-center">
-                <li><a href="{{ url_for('rentalboard') }}" class="nav-link px-2 text-light" id="reitext">Rental Dashboard</a></li>
-            </ul>
-        </header>
-    </div>
-    
+<fieldset>
+  <table class="table table-hover table-light">
+    <thead>
+      <th scope="col" id="tabletext">The Rocket Business Plan Blueprint</th>
+    </thead>
 
-    <table class="table table-hover table-dark">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
+    <tbody>
+      <tr>
+        <th scope="row">Do you have an LLC?</th>
+      </tr>
+      <tr>
+        <th scope="row">Do you have an attorney?</th>
+      </tr>
+      <tr>
+        <th scope="row">Do you have a tax professional?</th>
+      </tr>
+      <tr>
+        <th scope="row">What market do you want to invest in?</th>
+      </tr>
+      <tr>
+        <th scope="row">How will you be calculating your investment deals?</th>
+      </tr>
+      <tr>
+        <th scope="row">How will you get deals? (Cold Calling, Wholesalers, Door Knock, MLS, Realtors, Networking)</th>
+      </tr>
+      <tr>
+        <th scope="row">Money:</th>
+      </tr>
+      <tr>
+        <th scope="row">Hard Money Loans? Are you approved? Points on loan? Interst? Down Payment? Loan To Value Terms?
+        </th>
+      </tr>
+      <tr>
+        <th scope="row">Do you have the funds?</th>
+      </tr>
+      <tr>
+        <th scope="row">Are you using Private money? What are their loan terms?</th>
+      </tr>
+      <tr>
+        <th scope="row">Do you have a Title Company?</th>
+      </tr>
+      <tr>
+        <th scope="row">How many offers a day are you going to make?</th>
+      </tr>
+      <tr>
+        <th scope="row">How much average profit per deal do you want to make?</th>
+      </tr>
 
-    {% endblock content %}
+    </tbody>
+
+  </table>
+</fieldset>
+
+<br>
+
+
+{% endblock content %}
