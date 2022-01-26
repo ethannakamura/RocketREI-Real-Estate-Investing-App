@@ -1,38 +1,48 @@
+
 import dash
 from dash import dcc
 from dash import html
 from flask import app
 import plotly.express as px
 import pandas as pd
+from dash.dependencies import Input, Output, State
+import plotly.graph_objects as go
 
 app = dash.Dash(__name__)
 
-# assume you have a "long-form" data frame
-# see https://plotly.com/python/px-arguments/ for more options
-df = pd.DataFrame({
-    "Fruit": ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
-    "Amount": [4, 1, 2, 2, 4, 5],
-    "City": ["SF", "SF", "SF", "Montreal", "Montreal", "Montreal"]
-})
+#Fair Market Rent
 
-def create_dash_application(flask_app):
+fmrdata = pd.read_csv('Fair_Market_Rents_1bdr.csv')
+
+fmrfig = px.scatter(fmrdata, x="County", y="Price", color="State", height=2000,
+title="1 Bedroom Fair Market Rent Prices By County/State")
+
+fmrfig.update_layout = margin=dict(l=0, r=00, t=00, b=0)
+
+def fair_market_rent(flask_app):
     
-    dash_app = dash.Dash(server=flask_app, name="Dashboard", url_base_pathname='/dash/')
+    fmr_app = dash.Dash(server=flask_app, name="Dashboard", url_base_pathname='/fmr/')
 
-    dash_app.layout = html.Div(
-        children=[
-            html.H1(children='Hello Dash'),
-            html.Div(
-                children='''
-            Dash: A web application framework for your data.
-        '''
-            ),
-            dcc.Graph(
-                id='example-graph',
-                figure= px.bar(df, x="Fruit", y="Amount", color="City", barmode="group"),  
-        )]
-    )
-    return dash_app
+    fmr_app.layout = html.Div(children=[
+
+        dcc.Graph(
+            id='example-graph',
+            figure=fmrfig
+        )
+    ])
+
+    return fmr_app
+
+@app.callback(
+    Output("graph", "figure"), 
+    [Input('width', '2000')], 
+    [State("graph", "figure")])
+def resize_figure(width, fig_json):
+    fig = go.Figure(fig_json)
+    fig.update_layout(width=int(width))
+
+    return fmrfig
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)

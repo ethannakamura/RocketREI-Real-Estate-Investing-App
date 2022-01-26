@@ -3,7 +3,7 @@ from config import Config
 from flask_migrate import Migrate
 from . models import login
 from . models import db 
-#from .dash_application import fairmarketrent
+from .dash_application import fair_market_rent
 
 migrate = Migrate()
 
@@ -23,6 +23,8 @@ def create_app(config_class=Config):
 
     app.register_blueprint(auth)
     app.register_blueprint(calculators)
+
+    fair_market_rent(app)
 
     with app.app_context():
         from . import routes
