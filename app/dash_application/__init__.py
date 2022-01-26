@@ -17,7 +17,7 @@ fmrdata = pd.read_csv('Fair_Market_Rents.csv')
 fmrfig = px.scatter(fmrdata, x="County", y="One Bed Price", color="State", height=1000,
 title="One Bedroom Fair Market Rent Prices By County and State")
 
-fmrfig.update_layout = margin=dict(l=0, r=00, t=00, b=0)
+fmrfig.update_layout = margin=dict(l=0, r=0, t=0, b=0)
 
 def fair_market_rent(flask_app):
     
@@ -50,7 +50,7 @@ fmrdata2 = pd.read_csv('Fair_Market_Rents.csv')
 fmrfig2 = px.scatter(fmrdata, x="County", y="Two Bed Price", color="State", height=1000,
 title="Two Bedroom Fair Market Rent Prices By County and State")
 
-fmrfig2.update_layout = margin=dict(l=0, r=00, t=00, b=0)
+fmrfig2.update_layout = margin=dict(l=0, r=0, t=0, b=0)
 
 def fair_market_rent2(flask_app):
     
@@ -83,7 +83,7 @@ fmrdata3 = pd.read_csv('Fair_Market_Rents.csv')
 fmrfig3 = px.scatter(fmrdata, x="County", y="Three Bed Price", color="State", height=1000,
 title="Three Bedroom Fair Market Rent Prices By County and State")
 
-fmrfig3.update_layout = margin=dict(l=0, r=00, t=00, b=0)
+fmrfig3.update_layout = margin=dict(l=0, r=0, t=0, b=0)
 
 def fair_market_rent3(flask_app):
     
@@ -116,7 +116,7 @@ fmrdata4 = pd.read_csv('Fair_Market_Rents.csv')
 fmrfig4 = px.scatter(fmrdata, x="County", y="Four Bed Price", color="State", height=1000,
 title="Four Bedroom Fair Market Rent Prices By County and State")
 
-fmrfig4.update_layout = margin=dict(l=0, r=00, t=00, b=0)
+fmrfig4.update_layout = margin=dict(l=0, r=0, t=0, b=0)
 
 def fair_market_rent4(flask_app):
     
