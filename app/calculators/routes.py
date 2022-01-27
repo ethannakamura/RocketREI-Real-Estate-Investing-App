@@ -39,7 +39,7 @@ def incexp():
 
             flash1 = str(resonepointfive)
             flash2 = str(restwopointfive)
-            final = (f'Your Monthly Rental Income: ${flash1} & Rental Expenses: ${flash2} \r\n EXCLUDE DOLLAR SIGNS FROM ALL ENTRIES ')
+            final = (f'Your Monthly Rental Income: ${flash1} & Rental Expenses: ${flash2}')
 
             print('info received')
             flash(final, category='success')

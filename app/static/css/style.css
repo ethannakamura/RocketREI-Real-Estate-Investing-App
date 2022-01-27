@@ -122,10 +122,17 @@ fieldset{
     margin:auto;
 }
 .renttext{
-    color:rgba(255, 255, 255, 0.776);
+    color:rgb(255, 255, 255);
     font-weight: bolder;
     font-size:18px;
 }
+
+.instext{
+    color:rgb(255, 132, 0);
+    font-weight: bolder;
+    font-size:22px;
+}
+
 #rentalcalcimage{
     width:50px;
     height:50px;
