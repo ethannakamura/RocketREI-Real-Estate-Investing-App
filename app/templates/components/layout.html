@@ -55,21 +55,24 @@
                 <li class="nav-item">
                     <a class="nav-link text-light" id="navdash" id="navtext" href="{{ url_for('auth.rentalboard') }}">Rental Dashboard</a>
                 </li>
+
                 <div class="container justify-content-center">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle"  id="navinvest" href="http://example.com" id="dropdown01"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Investonauts</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
                             {% if current_user.is_authenticated %}
-                                <a class="dropdown-item text-center text-black" id="droptext3" href="{{ url_for('auth.logout') }}">Logout</a>
+                                <a class="dropdown-item text-center text-black" id="droptext3" href="{{ url_for('fairmarketrent') }}">Fair Market Rent Data</a>
+                                <a class="dropdown-item text-center text-black" id="droptext3" href="{{ url_for('incexp') }}">Rental Propery Calculator</a>
                                 <a class="dropdown-item text-center text-black" id="droptext3" href="{{ url_for('auth.profile') }}">My Profile</a>
+                                <a class="dropdown-item text-center text-black" id="droptext3" href="{{ url_for('auth.logout') }}">Logout</a>
                             {% else %}
                                 <a class="dropdown-item text-center text-black" id="droptext1" href="{{ url_for('auth.signup') }}">Sign Up</a>
                                 <a class="dropdown-item text-center text-black" id="droptext2" href="{{ url_for('auth.signin') }}">Login</a>
                             {% endif %} 
                         </div>
+                    </li>
                 </div>
-                </li>
             </ul>
             <br>
             <div class="form-inline my-2 my-md-0 justify-content-center ">
